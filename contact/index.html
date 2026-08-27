@@ -11,38 +11,48 @@
 <header class="topbar"><a class="home-link" href="../index.html">← Dashboard</a><span class="crumb">Contact</span></header>
 <main class="wrap node">
   <div class="hero">
-    <div class="hero-badges"><span class="badge owner-it">IT-bespoke</span><span class="pill st-wip">กำลังทำ/ต้องแก้</span></div>
+    <div class="hero-badges"><span class="badge owner-it">IT-bespoke</span><span class="pill st-wip">รอ IT แทน stub (launch blocker)</span></div>
     <h1>Contact</h1>
     <a class="url" href="https://web.cigblusolutions.com/contact" target="_blank" rel="noopener">/contact ↗</a>
-    <p class="hero-note">prototype drafted (sprints/w32-sprint-3/contact.html) — IT finalize · รอ confirm address/phone/email</p>
+    <p class="hero-note">Prototype เสร็จแล้ว (team-handoff/sprints/w32-sprint-3) — /contact บน live ยังเป็น stub "Content coming soon" และเป็นจุดที่ปุ่ม "Get quote" ทั้งเว็บวิ่งมาตาย ถือเป็น launch blocker อันดับ 1</p>
   </div>
 
   <section class="block">
     <h2><span class="num">1</span> Change notes <span class="hint">สิ่งที่หน้านี้/section ต้องแก้</span></h2>
-    <p class="empty">— ยังไม่มีข้อมูล · เติมภายหลัง —</p>
-    <!-- เติม: วันที่ · สิ่งที่เปลี่ยน · ใครขอ -->
+    <ul>
+      <li><strong>Stub → replace main content:</strong> /contact บนเว็บ live (<code>web.cigblusolutions.com/contact</code>) ยังเป็น "Content coming soon" — ไม่มี form, map, ที่อยู่ หรือ footer เลย IT เอา main content จาก prototype (<code>contact.html</code> ด้านล่าง) ไปแทน stub ได้เลย — nav กับ footer ในไฟล์ prototype คือ production shell จริงที่ IT build ไว้แล้ว <strong>ไม่ต้องแตะ</strong></li>
+      <li><strong>อีเมลมาตรฐาน:</strong> ตัดสินใจแล้วว่าใช้ <code>contact@cigblu.com</code> — prototype ปัจจุบันยังเขียน <code>contact@cigblusolutions.com</code> ทุกจุด (hero panel, form footer, footer, JSON-LD) ให้ IT เปลี่ยนตอน build จริง อย่าไปแก้ไฟล์ prototype เอง เว้นแต่มีคนสั่ง</li>
+      <li><strong>Form submit:</strong> ปุ่ม Submit ของฟอร์ม enquiry ตอนนี้เป็น draft เฉยๆ (ยังไม่ต่อระบบ) — IT ต้องต่อเข้า CRM/email workflow จริง พร้อม privacy consent</li>
+      <li><strong>Google Maps:</strong> prototype ใช้ embed แบบ keyless (ไม่ต้อง API key) ใช้ launch ได้เลย ถ้าบริษัทมี Maps API key ของตัวเองค่อยเปลี่ยนทีหลัง ไม่บล็อกการ launch</li>
+    </ul>
   </section>
 
   <section class="block">
     <h2><span class="num">2</span> Resource downloads <span class="hint">ไฟล์ให้ IT โหลด</span></h2>
-    <p class="empty">— ยังไม่มีข้อมูล · เติมภายหลัง —</p>
-    <!-- เติม: <a class="dl" href="URL-ไฟล์ใน-repo">ชื่อไฟล์.ext</a> -->
+    <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/sprints/w32-sprint-3/new-for-it-this-sprint/contact.html" target="_blank" rel="noopener">contact.html (prototype)</a>
+    <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/sprints/w32-sprint-3/new-for-it-this-sprint/11-contact-page-section-guide.html" target="_blank" rel="noopener">11-contact-page-section-guide.html (คู่มือประกบ)</a>
+    <p class="muted" style="font-size:13px;margin:10px 0 0">ไฟล์อยู่ใน repo เว็บ private <code>cib-website</code> — IT/MKT ที่ login GitHub มีสิทธิ์อยู่แล้วโหลดได้ปกติ คนนอกเจอ 404 = ไฟล์ยัง private ตามปกติ</p>
   </section>
 
   <section class="block">
     <h2><span class="num">3</span> สถานะงาน</h2>
     <table class="kv">
       <tr><td>เจ้าของ build</td><td>IT-bespoke</td></tr>
-      <tr><td>สถานะปัจจุบัน</td><td>กำลังทำ/ต้องแก้</td></tr>
-      <tr><td>อัปเดตล่าสุด</td><td class="muted">—</td></tr>
+      <tr><td>สถานะปัจจุบัน</td><td>Prototype เสร็จ · รอ IT แทน stub (launch blocker)</td></tr>
+      <tr><td>อัปเดตล่าสุด</td><td>2026-08-27</td></tr>
     </table>
   </section>
 
   <section class="block">
     <h2><span class="num">4</span> ลิงก์อ้างอิง</h2>
-    <ul class="refs"><li>Live (staging): <a href="https://web.cigblusolutions.com/contact" target="_blank" rel="noopener">https://web.cigblusolutions.com/contact</a></li><li>Live (final): <span class="muted">https://www.cigblu.com/contact</span> <span class="muted">(เมื่อย้าย domain)</span></li><li>Figma frame: <span class="muted">— วางลิงก์ —</span></li><li>ไฟล์ต้นทางใน repo: <span class="muted">— วางลิงก์ —</span></li></ul>
+    <ul class="refs">
+      <li>Live (staging): <a href="https://web.cigblusolutions.com/contact" target="_blank" rel="noopener">https://web.cigblusolutions.com/contact</a> <span class="muted">(ปัจจุบันเป็น stub)</span></li>
+      <li>Live (final): <span class="muted">https://www.cigblu.com/contact</span> <span class="muted">(เมื่อย้าย domain)</span></li>
+      <li>Figma frame: <span class="muted">— ยังไม่มี · ใช้ HTML prototype เป็นต้นแบบแทน —</span></li>
+      <li>ไฟล์ต้นทางใน repo: <a href="https://github.com/tikittisak/cib-website/tree/master/team-handoff/sprints/w32-sprint-3/new-for-it-this-sprint" target="_blank" rel="noopener">team-handoff/sprints/w32-sprint-3/new-for-it-this-sprint/</a></li>
+    </ul>
   </section>
 
-  <footer class="scaffold-foot">หน้านี้เป็น <strong>scaffold เปล่า</strong> — โครงพร้อม รอเติมเนื้อหาทีละหน้า</footer>
+  <footer class="scaffold-foot">เนื้อหาเติมแล้ว 2026-08-27 · ถัดไปเช็คกับ Ti ก่อนเลือกหน้าถัดไป</footer>
 </main>
 </body></html>
