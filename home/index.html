@@ -58,7 +58,7 @@
     <div class="ci low">
       <div class="ci-top"><span class="sev low">Low</span><span class="stt wait">รอ path รูป</span></div>
       <div class="ci-title">รูป lazy-load หนัก บาง section scroll เจอจอขาวก่อนรูปมา</div>
-      <p>ทีมปรับรูป optimize แล้ว → ให้ IT โหลดไฟล์จากบล็อก Resource ด้านล่างไปแทนของเดิม (รอ path โฟลเดอร์รูปจาก Ti)</p>
+      <p>ดูรายชื่อรูปที่ต้องทำทั้ง 19 ไฟล์ (checklist + ชื่อไฟล์มาตรฐาน) ในบล็อก Resource ด้านล่าง → รอทีมรูปผลิตจริงแล้วส่งมาที่ path เดียวกัน IT ถึงจะเอาไปแทนของเดิมได้</p>
     </div>
 
     <div class="ci med">
@@ -130,9 +130,32 @@
     <h2><span class="num">2</span> Resource downloads <span class="hint">ไฟล์ให้ IT โหลด</span></h2>
     <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/01-home-page-section-guide.html" target="_blank" rel="noopener">📄 Home design guide (section-by-section)</a>
     <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/sprints/w32-sprint-3/it-build-issues-by-page-th.md" target="_blank" rel="noopener">📄 UAT issues by page</a>
-    <a class="dl wait" href="#">🖼️ รูป optimize แล้ว (Home) — รอ path</a>
     <a class="dl wait" href="#">🖼️ og-home.jpg 1200×630 — รอ Ti ทำส่ง</a>
     <p class="small" style="margin-top:8px;color:var(--muted)">ปุ่มโหลดชี้ไฟล์จริงใน repo <code>cib-website</code> (private, branch <code>master</code>) — IT/MKT login GitHub กดโหลดได้ · <strong>UAT issues by page ยังไม่ push ขึ้น repo</strong> ตอนนี้กดแล้วจะ 404 ชั่วคราว (รอ Ti confirm ให้ push)</p>
+
+    <p class="audit-meta" style="margin-top:16px"><b>🖼️ รูป Home ที่ต้องทำ — 19 ไฟล์</b> ยังไม่มีไฟล์จริงอยู่ในเครื่องเลยสักไฟล์ (หน้า Home จริงเป็นของ IT build แยกนอก repo นี้) รายชื่อด้านล่างคือ <strong>ข้อเสนอให้ทีมรูปผลิตใหม่</strong> อิงจาก draft spec เก่า + UAT จาก live จริง ไม่ใช่การ rename ไฟล์ที่มีอยู่แล้ว — ยึด naming convention จริงของเว็บ: lowercase kebab-case + <code>.webp</code> (เช่น <code>d-coat-superhydrophobic-coating-hero.webp</code> ที่มีอยู่จริงใน <code>site/products/images/</code>)</p>
+    <table class="mini">
+      <tr><td>1. Hero background</td><td><code>home-hero.webp</code></td><td></td></tr>
+      <tr><td>2. Social share (og:image)</td><td><code>home-og.webp</code></td><td class="bad">1200×630px — live ไม่มี og:image เลยตอนนี้</td></tr>
+      <tr><td>3. Highlight — D-COAT+</td><td><code>d-coat-plus-card.webp</code></td><td></td></tr>
+      <tr><td>4. Highlight — Heresite P-413</td><td><code>heresite-p-413-card.webp</code></td><td></td></tr>
+      <tr><td>5. Highlight — R290</td><td><code>r290-package-unit-card.webp</code></td><td></td></tr>
+      <tr><td>6. Highlight — Stainless Steel Unit Cooler</td><td><code>stainless-steel-unit-cooler-card.webp</code></td><td class="bad">เร่งด่วน — live ใช้รูป+alt ของ R290 ซ้ำอยู่</td></tr>
+      <tr><td>7. Featured — EC Fan Air-Cooled Condenser</td><td><code>ec-fan-air-cooled-condenser-card.webp</code></td><td></td></tr>
+      <tr><td>8. Featured — Custom Design Replacement</td><td><code>custom-design-replacement-project-card.webp</code></td><td></td></tr>
+      <tr><td>9. Featured — Data Center Cooling (imvera)</td><td><code>home-imvera-data-center-cooling.webp</code></td><td></td></tr>
+      <tr><td>10. Cert badge — AHRI</td><td><code>cert-badge-ahri.webp</code></td><td class="bad">rename จริง — live ใช้ <code>Frame 15979.jpg</code></td></tr>
+      <tr><td>11. Cert badge — ISO 9001</td><td><code>cert-badge-iso-9001.webp</code></td><td class="bad">rename จริง — live ใช้ <code>Frame 15988 (1).jpg</code></td></tr>
+      <tr><td>12. Cert badge — EcoVadis</td><td><code>cert-badge-ecovadis.webp</code></td><td class="bad">rename จริง</td></tr>
+      <tr><td>13. Cert badge — UL</td><td><code>cert-badge-ul.webp</code></td><td class="bad">rename จริง — live ใช้ <code>UL_cRUus 1.jpg</code></td></tr>
+      <tr><td>14. Industry — Marine &amp; Offshore</td><td><code>industry-marine-offshore-card.webp</code></td><td></td></tr>
+      <tr><td>15. Industry — Data Center Cooling</td><td><code>industry-data-center-cooling-card.webp</code></td><td></td></tr>
+      <tr><td>16. Industry — Food Processing &amp; Cold Chain</td><td><code>industry-food-processing-cold-chain-card.webp</code></td><td></td></tr>
+      <tr><td>17. Industry — Commercial &amp; Industrial</td><td><code>industry-commercial-industrial-card.webp</code></td><td></td></tr>
+      <tr><td>18. Industry — Cleanroom &amp; Pharma</td><td><code>industry-cleanroom-pharma-card.webp</code></td><td></td></tr>
+      <tr><td>19. Industry — Smart Building &amp; Energy</td><td><code>industry-smart-building-energy-card.webp</code></td><td></td></tr>
+    </table>
+    <p class="small" style="margin-top:8px;color:var(--muted)">ไม่รวม footer logo/ไอคอนที่มีอยู่แล้วและโอเคอยู่แล้ว (kebab-case + optimize ถูกต้องแล้ว)</p>
   </section>
 
   <section class="block">
