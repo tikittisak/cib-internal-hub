@@ -19,7 +19,8 @@
 
   <section class="block">
     <h2><span class="num">1</span> Change notes <span class="hint">Audit 2026-08-27</span></h2>
-    <p class="audit-meta"><b>อ่านยังไง:</b> <span class="verified">✓ verify live</span> = ยืนยันจากหน้าจริงวันนี้ · <span class="stt ok">ตกลงแล้ว</span> พร้อมส่ง IT · <span class="stt hold">รอเคาะ</span> รอ Ti ตัดสิน · <span class="stt wait">รอข้อมูล</span> รอไฟล์/URL</p>
+    <p class="audit-meta"><b>อ่านยังไง:</b> <span class="verified">✓ verify live</span> = ยืนยันจากหน้าจริงวันนี้ · <span class="stt ok">ตกลงแล้ว</span> พร้อมส่ง IT · <span class="stt hold">รอเคาะ</span> รอ Ti ตัดสิน · <span class="stt wait">รอข้อมูล</span> รอไฟล์/URL · <span class="stt ok">✓ แก้แล้ว</span> ไฟล์พร้อม รอ push + IT เอาไปแทน</p>
+    <p class="audit-meta" style="background:#e8f7ee;border-color:#bfe6cc"><b>✅ แก้แล้ว (2026-08-27, รอ push):</b> og:image หาย · รูป 5 ไฟล์ใหญ่เกิน (สาเหตุ lazy-load หนัก) · favicon เป็น placeholder ทั่วไป — ไฟล์อยู่ใน block 2 ด้านล่าง ยังไม่ push ขึ้น repo</p>
 
     <!-- UX -->
     <div class="dim">🧭 UX — ลิงก์ / flow</div>
@@ -56,9 +57,10 @@
     <div class="dim">🎨 UI — หน้าตา / โครง</div>
 
     <div class="ci low">
-      <div class="ci-top"><span class="sev low">Low</span><span class="stt wait">รอ path รูป</span></div>
+      <div class="ci-top"><span class="sev low">Low</span><span class="stt ok">✓ แก้แล้ว</span><span class="verified">✓ verify live</span></div>
       <div class="ci-title">รูป lazy-load หนัก บาง section scroll เจอจอขาวก่อนรูปมา</div>
-      <p>ดูรายชื่อรูปที่ต้องทำทั้ง 19 ไฟล์ (checklist + ชื่อไฟล์มาตรฐาน) ในบล็อก Resource ด้านล่าง → รอทีมรูปผลิตจริงแล้วส่งมาที่ path เดียวกัน IT ถึงจะเอาไปแทนของเดิมได้</p>
+      <p>เช็คจาก DOM จริงแล้วเจอสาเหตุ: 5 ไฟล์ถูก serve ใหญ่กว่าที่ render จริง 4-11 เท่า (เช่น <code>home-industry-iot-smart-energy.png</code> ต้นฉบับ 10.8MB ทั้งที่โชว์แค่ 347×691px) รวม ~36MB</p>
+      <p class="fix">→ resize ตาม render size จริง (2x retina) + แปลง .webp แล้ว เหลือ ~886KB รวม (ลด 97.5%) — ไฟล์อยู่ block 2 รอ push</p>
     </div>
 
     <div class="ci med">
@@ -67,13 +69,20 @@
       <p>สองประโยคติดกันในข้อความ (crawler อ่านเป็นคำเดียว "Transfer.Built") → ตรวจการตัดบรรทัด/เว้นวรรค</p>
     </div>
 
+    <div class="ci low">
+      <div class="ci-top"><span class="sev low">Low</span><span class="stt ok">✓ แก้แล้ว</span><span class="verified">✓ verify live</span></div>
+      <div class="ci-title">Favicon เป็น placeholder ทั่วไป ไม่ใช่แบรนด์ CIG เลย (วงกลมดำ+สามเหลี่ยมขาว)</div>
+      <p>เช็คจริง: มี <code>&lt;link rel="icon"&gt;</code> ชี้ไป <code>favicon.ico</code> จริง แต่ไฟล์ข้างในเป็น generic placeholder ไม่มีแบรนด์เลย · เช็ค <code>icon.png</code> ด้วย เป็นกราฟิก crosshair ที่ไม่ได้ใช้งานจริง</p>
+      <p class="fix">→ ทำจากโลโก้จริง (ตัดเหลือแค่สัญลักษณ์ O) เป็นชุด <code>favicon.ico</code> (16/32/48/256) + <code>icon-192/512.png</code> + <code>apple-touch-icon.png</code> แล้ว อยู่ block 2 รอ push</p>
+    </div>
+
     <!-- SEO -->
     <div class="dim">🔍 SEO</div>
 
     <div class="ci med">
-      <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอรูป</span><span class="verified">✓ verify live</span></div>
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt ok">✓ แก้แล้ว</span><span class="verified">✓ verify live</span></div>
       <div class="ci-title">og:image = null (twitter:image ก็ null) → แชร์ลิงก์ไม่มีรูป</div>
-      <p>แปะลิงก์ใน Line/FB ขึ้นกล่องเปล่า. Spec รูป: 1200×630 px, พื้นทึบ, &lt;300KB, ชื่อ <code>og-home.jpg</code>. Tag ให้ IT ใส่:</p>
+      <p>แปะลิงก์ใน Line/FB ขึ้นกล่องเปล่า — ยืนยันจริงว่า <code>&lt;meta property="og:image"&gt;</code> ไม่มีในหน้าเลย ไม่ใช่แค่ broken link. <code>og-home.jpg</code> (1200×630, โลโก้จริง+tagline, 44KB) ทำเสร็จแล้ว อยู่ block 2 รอ push. Tag ให้ IT ใส่:</p>
       <pre class="code">&lt;meta property="og:image" content="https://www.cigblu.com/og-home.jpg"&gt;
 &lt;meta property="og:image:width" content="1200"&gt;
 &lt;meta property="og:image:height" content="630"&gt;
@@ -110,6 +119,13 @@
       <p class="fix">→ เปลี่ยนเป็น <code>contact@cigblu.com</code> ทุกจุด (footer + panel + JSON-LD)</p>
     </div>
 
+    <div class="ci med">
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอ IT แก้โค้ด</span><span class="verified">✓ verify live</span></div>
+      <div class="ci-title">Text ฝังอยู่ในรูปภาพ — ไม่ใช่ HTML text</div>
+      <p>รูปแบนเนอร์ (เดิมชื่อ <code>Frame 15979.jpg</code>, alt ซ้ำกับ hero "Heat Exchanger Special Coating") มีข้อความ "RELIABLE PERFORMANCE WITH MEASURABLE ROI" วาดฝังอยู่ในพิกเซลรูปเลย ไม่ใช่ HTML text — ขัดกับกฎที่ SEO-META ของหน้านี้เขียนไว้เองว่า "Business-critical text must remain HTML text"</p>
+      <p class="fix">→ ต้องแยกข้อความออกมาเป็น HTML overlay ให้ IT — resize รูปอย่างเดียวแก้ไม่ได้ (บีบไฟล์ให้เล็กลงแล้ว แต่ปัญหานี้ยังอยู่ ดู block 2)</p>
+    </div>
+
     <div class="ci low">
       <div class="ci-top"><span class="sev low">Low</span><span class="verified">✓ verify live</span></div>
       <div class="ci-title">มี Organization JSON-LD แล้ว → เพิ่ม WebSite schema (+SearchAction) ให้ AI เข้าใจโครง site</div>
@@ -130,41 +146,28 @@
     <h2><span class="num">2</span> Resource downloads <span class="hint">ไฟล์ให้ IT โหลด</span></h2>
     <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/01-home-page-section-guide.html" target="_blank" rel="noopener">📄 Home design guide (section-by-section)</a>
     <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/sprints/w32-sprint-3/it-build-issues-by-page-th.md" target="_blank" rel="noopener">📄 UAT issues by page</a>
-    <a class="dl wait" href="#">🖼️ og-home.jpg 1200×630 — รอ Ti ทำส่ง</a>
     <p class="small" style="margin-top:8px;color:var(--muted)">ปุ่มโหลดชี้ไฟล์จริงใน repo <code>cib-website</code> (private, branch <code>master</code>) — IT/MKT login GitHub กดโหลดได้ · <strong>UAT issues by page ยังไม่ push ขึ้น repo</strong> ตอนนี้กดแล้วจะ 404 ชั่วคราว (รอ Ti confirm ให้ push)</p>
 
-    <p class="audit-meta" style="margin-top:16px"><b>🖼️ รูป Home ที่ต้องทำ — 19 ไฟล์</b> ยังไม่มีไฟล์จริงอยู่ในเครื่องเลยสักไฟล์ (หน้า Home จริงเป็นของ IT build แยกนอก repo นี้) รายชื่อด้านล่างคือ <strong>ข้อเสนอให้ทีมรูปผลิตใหม่</strong> อิงจาก draft spec เก่า + UAT จาก live จริง ไม่ใช่การ rename ไฟล์ที่มีอยู่แล้ว — ยึด naming convention จริงของเว็บ: lowercase kebab-case + <code>.webp</code> (เช่น <code>d-coat-superhydrophobic-coating-hero.webp</code> ที่มีอยู่จริงใน <code>site/products/images/</code>)</p>
+    <p class="audit-meta" style="margin-top:16px;background:#e8f7ee;border-color:#bfe6cc"><b>✅ ไฟล์รูปพร้อมแล้ว 10 ไฟล์ (2026-08-27)</b> — เช็ค render size จริงจาก DOM ก่อนทำ ไม่ใช่เดา · staged อยู่ใน repo <code>cib-website</code> <strong>ยังไม่ push</strong> (รอ Ti confirm) ลิงก์ด้านล่างจะ 404 จนกว่าจะ push</p>
+    <a class="dl wait" href="https://github.com/tikittisak/cib-website/tree/master/team-handoff/sprints/w32-sprint-3/new-for-it-this-sprint/home-images" target="_blank" rel="noopener">📁 home-images/ — โฟลเดอร์รวมทั้งหมด (รอ push)</a>
     <table class="mini">
-      <tr><td>1. Hero background</td><td><code>home-hero.webp</code></td><td></td></tr>
-      <tr><td>2. Social share (og:image)</td><td><code>home-og.webp</code></td><td class="bad">1200×630px — live ไม่มี og:image เลยตอนนี้</td></tr>
-      <tr><td>3. Highlight — D-COAT+</td><td><code>d-coat-plus-card.webp</code></td><td></td></tr>
-      <tr><td>4. Highlight — Heresite P-413</td><td><code>heresite-p-413-card.webp</code></td><td></td></tr>
-      <tr><td>5. Highlight — R290</td><td><code>r290-package-unit-card.webp</code></td><td></td></tr>
-      <tr><td>6. Highlight — Stainless Steel Unit Cooler</td><td><code>stainless-steel-unit-cooler-card.webp</code></td><td class="bad">เร่งด่วน — live ใช้รูป+alt ของ R290 ซ้ำอยู่</td></tr>
-      <tr><td>7. Featured — EC Fan Air-Cooled Condenser</td><td><code>ec-fan-air-cooled-condenser-card.webp</code></td><td></td></tr>
-      <tr><td>8. Featured — Custom Design Replacement</td><td><code>custom-design-replacement-project-card.webp</code></td><td></td></tr>
-      <tr><td>9. Featured — Data Center Cooling (imvera)</td><td><code>home-imvera-data-center-cooling.webp</code></td><td></td></tr>
-      <tr><td>10. Cert badge — AHRI</td><td><code>cert-badge-ahri.webp</code></td><td class="bad">rename จริง — live ใช้ <code>Frame 15979.jpg</code></td></tr>
-      <tr><td>11. Cert badge — ISO 9001</td><td><code>cert-badge-iso-9001.webp</code></td><td class="bad">rename จริง — live ใช้ <code>Frame 15988 (1).jpg</code></td></tr>
-      <tr><td>12. Cert badge — EcoVadis</td><td><code>cert-badge-ecovadis.webp</code></td><td class="bad">rename จริง</td></tr>
-      <tr><td>13. Cert badge — UL</td><td><code>cert-badge-ul.webp</code></td><td class="bad">rename จริง — live ใช้ <code>UL_cRUus 1.jpg</code></td></tr>
-      <tr><td>14. Industry — Marine &amp; Offshore</td><td><code>industry-marine-offshore-card.webp</code></td><td></td></tr>
-      <tr><td>15. Industry — Data Center Cooling</td><td><code>industry-data-center-cooling-card.webp</code></td><td></td></tr>
-      <tr><td>16. Industry — Food Processing &amp; Cold Chain</td><td><code>industry-food-processing-cold-chain-card.webp</code></td><td></td></tr>
-      <tr><td>17. Industry — Commercial &amp; Industrial</td><td><code>industry-commercial-industrial-card.webp</code></td><td></td></tr>
-      <tr><td>18. Industry — Cleanroom &amp; Pharma</td><td><code>industry-cleanroom-pharma-card.webp</code></td><td></td></tr>
-      <tr><td>19. Industry — Smart Building &amp; Energy</td><td><code>industry-smart-building-energy-card.webp</code></td><td></td></tr>
+      <tr><td>รูป industries ×4 (.webp)</td><td class="good">แทนของเดิม 1:1 — เดิม 6.3-10.8MB → เหลือ 43-297KB</td></tr>
+      <tr><td>home-feature-band.webp</td><td class="hold2">บีบขนาดแล้ว แต่ยังมี text ฝังในรูป (ดู block 1)</td></tr>
+      <tr><td>og-home.jpg (1200×630)</td><td class="good">ทำใหม่ทั้งหมด — Ti เป็นคนทำเวอร์ชันสุดท้าย</td></tr>
+      <tr><td>favicon.ico + icon-192/512.png + apple-touch-icon.png</td><td class="good">แทน placeholder เดิม</td></tr>
     </table>
-    <p class="small" style="margin-top:8px;color:var(--muted)">ไม่รวม footer logo/ไอคอนที่มีอยู่แล้วและโอเคอยู่แล้ว (kebab-case + optimize ถูกต้องแล้ว)</p>
+    <p class="small" style="margin-top:8px;color:var(--muted)">รายละเอียด old→new filename ครบใน <code>home-images/README.md</code> ในโฟลเดอร์เดียวกัน</p>
   </section>
 
   <section class="block">
     <h2><span class="num">3</span> สถานะงาน</h2>
     <table class="kv">
       <tr><td>เจ้าของ build</td><td>IT สร้างเอง</td></tr>
-      <tr><td>สถานะปัจจุบัน</td><td>ขึ้น live แล้ว · รอแก้ (2 High · 6 Medium · 3 Low)</td></tr>
-      <tr><td>ค้างรอ Ti</td><td>industries 2 อัน · Engineering app URL · path รูป · og image · URL casing</td></tr>
-      <tr><td>อัปเดตล่าสุด</td><td>2026-08-27 (audit live)</td></tr>
+      <tr><td>สถานะปัจจุบัน</td><td>ขึ้น live แล้ว · แก้แล้ว 3 จุด (รอ push) · เหลือรอ IT/Ti 8 จุด</td></tr>
+      <tr><td>แก้แล้ว รอ push</td><td>og:image · รูป 5 ไฟล์ใหญ่เกิน (lazy-load) · favicon</td></tr>
+      <tr><td>ค้างรอ Ti ตัดสิน</td><td>industries 2 อัน (Commercial/Cleanroom) · Engineering app URL · URL casing · email footer</td></tr>
+      <tr><td>ค้างรอ IT แก้โค้ด</td><td>Stainless Steel card ผูกรูป/ลิงก์ผิด · industries 4 การ์ดลิงก์ผิด · H1 เว้นวรรค · heading h2→h3 · text ฝังในรูป (feature band)</td></tr>
+      <tr><td>อัปเดตล่าสุด</td><td>2026-08-27 · optimize รูป+favicon+og-image</td></tr>
     </table>
   </section>
 
@@ -178,6 +181,6 @@
     </ul>
   </section>
 
-  <footer class="scaffold-foot">Home node · audit 2026-08-27 · รอ Ti ส่งข้อมูลที่ค้างมาเติมทับ</footer>
+  <footer class="scaffold-foot">Home node · audit 2026-08-27 · 10 ไฟล์แก้แล้วรอ push · รอ Ti ตัดสิน 4 จุด + IT แก้โค้ด 5 จุด</footer>
 </main>
 </body></html>
