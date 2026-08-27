@@ -21,8 +21,9 @@
     <h2><span class="num">1</span> Change notes <span class="hint">สิ่งที่หน้านี้/section ต้องแก้</span></h2>
     <ul>
       <li><strong>Stub → replace main content:</strong> /contact บนเว็บ live (<code>web.cigblusolutions.com/contact</code>) ยังเป็น "Content coming soon" — ไม่มี form, map, ที่อยู่ หรือ footer เลย IT เอา main content จาก prototype (<code>contact.html</code> ด้านล่าง) ไปแทน stub ได้เลย — nav กับ footer ในไฟล์ prototype คือ production shell จริงที่ IT build ไว้แล้ว <strong>ไม่ต้องแตะ</strong></li>
-      <li><strong>อีเมลมาตรฐาน:</strong> ตัดสินใจแล้วว่าใช้ <code>contact@cigblu.com</code> — prototype ปัจจุบันยังเขียน <code>contact@cigblusolutions.com</code> ทุกจุด (hero panel, form footer, footer, JSON-LD) ให้ IT เปลี่ยนตอน build จริง อย่าไปแก้ไฟล์ prototype เอง เว้นแต่มีคนสั่ง</li>
-      <li><strong>Form submit:</strong> ปุ่ม Submit ของฟอร์ม enquiry ตอนนี้เป็น draft เฉยๆ (ยังไม่ต่อระบบ) — IT ต้องต่อเข้า CRM/email workflow จริง พร้อม privacy consent</li>
+      <li><strong>อีเมลมาตรฐาน — แก้แล้ว:</strong> <code>contact@cigblu.com</code> คือมาตรฐาน แก้ใน prototype แล้วทั้ง visible text และ JSON-LD (hero panel, map/CTA mailto, Organization + ContactPoint) ยกเว้น <strong>footer</strong> ที่เป็น verbatim IT shell ยังเขียน <code>contact@cigblusolutions.com</code> อยู่ — ถ้าจะให้ตรงกัน ต้องไปแก้ที่ไฟล์ต้นทางจริง <code>site/site-shell/footer/footer.html</code> แยกต่างหาก (นอก scope หน้านี้)</li>
+      <li><strong>SEO/AI crawler pass (2026-08-27) — แก้แล้ว:</strong> สะกด "enquiry" (British) → "inquiry" (US standard ตาม design-standard §9) ทั้ง meta description, h3, hero copy · เพิ่ม <code>&lt;h2&gt;</code> คลุม section แรก (เดิมกระโดด h1→h3 ไม่มี h2) ให้ตรง pattern กับ section อื่น · JSON-LD <code>contactType</code> เปลี่ยนจาก "customer support"/"office" (ไม่ใช่ค่าที่ Google รู้จัก) เป็น "customer service"/"sales"</li>
+      <li><strong>Form submit:</strong> ปุ่ม Submit ของฟอร์ม inquiry ตอนนี้เป็น draft เฉยๆ (ยังไม่ต่อระบบ) — IT ต้องต่อเข้า CRM/email workflow จริง พร้อม privacy consent</li>
       <li><strong>Google Maps:</strong> prototype ใช้ embed แบบ keyless (ไม่ต้อง API key) ใช้ launch ได้เลย ถ้าบริษัทมี Maps API key ของตัวเองค่อยเปลี่ยนทีหลัง ไม่บล็อกการ launch</li>
     </ul>
   </section>
