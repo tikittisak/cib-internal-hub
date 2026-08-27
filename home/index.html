@@ -33,17 +33,32 @@
     </div>
 
     <div class="ci high">
-      <div class="ci-top"><span class="sev high">High</span><span class="stt hold">รอเคาะ 2 อัน</span><span class="verified">✓ verify live</span></div>
-      <div class="ci-title">การ์ด Industries 4/6 ใบวิ่งไป imvera.co (ผิดแบรนด์)</div>
-      <p>Marine / Food / Commercial / Cleanroom ตอนนี้ลิงก์ <code>https://imvera.co</code> ทั้งหมด ทั้งที่ IMVERA ทำแค่ data center → ให้ชี้ไป product family ที่มีจริง:</p>
+      <div class="ci-top"><span class="sev high">High</span><span class="stt hold">รอเคาะ 2 อัน</span><span class="verified">✓ verify live 2026-08-27</span></div>
+      <div class="ci-title">แก้ไข: การ์ด Industries ทั้ง 6 ใบไม่มีลิงก์เลยสักใบ (ไม่ใช่ "4/6 ไปผิดที่" แบบที่เคยบันทึกไว้)</div>
+      <p><b>ตรวจซ้ำจริงจาก DOM วันนี้ (ก่อนหน้านี้บันทึกผิด):</b> เช็คทุกใบ (Marine, Food, Data Center, IoT, และอื่นๆ) ไม่มีใบไหนเป็น <code>&lt;a&gt;</code> หรือมี <code>&lt;button&gt;</code> อยู่ข้างในเลย — จำลอง click ตรงๆ ด้วย ก็ไม่มีอะไรเกิดขึ้น (URL ไม่เปลี่ยน ไม่มี tab ใหม่) สรุปคือ <b>การ์ดทั้ง 6 ใบกดไม่ได้เลยตอนนี้</b> ไม่ใช่แค่ลิงก์ผิดที่</p>
+      <p>Target ที่ควรจะเป็น (สำหรับตอน IT ต่อลิงก์):</p>
       <table class="mini">
         <tr><td>Marine &amp; Offshore</td><td class="good">/products/marine-application</td></tr>
         <tr><td>Food Processing &amp; Cold Chain</td><td class="good">/products/refrigeration</td></tr>
-        <tr><td>Data Center Cooling</td><td class="good">imvera.co ✓ คงไว้</td></tr>
-        <tr><td>IoT &amp; Smart Energy</td><td class="good">/solutions/smart-solutions-iot ✓ คงไว้</td></tr>
+        <tr><td>Data Center Cooling</td><td class="good">imvera.co (external)</td></tr>
+        <tr><td>IoT &amp; Smart Energy</td><td class="good">/solutions/smart-solutions-iot</td></tr>
         <tr><td>Commercial &amp; Industrial</td><td class="hold2">/products/ahu-ac-fresh-air (รอยืนยัน)</td></tr>
         <tr><td>Cleanroom &amp; Pharma</td><td class="hold2">/products/ahu-ac-fresh-air (รอยืนยัน)</td></tr>
       </table>
+    </div>
+
+    <div class="ci high">
+      <div class="ci-top"><span class="sev high">High</span><span class="stt wait">รอ IT แก้โค้ด</span><span class="verified">✓ verify live</span></div>
+      <div class="ci-title">ปุ่ม "View More" ตาย 2 จุดใน Featured Solutions (EC Fan + AHU/Fresh Air)</div>
+      <p>การ์ด "EC FAN Air Cooled Condenser" และ "Custom Design for Replacement Project / AHU Fresh Air Unit" ในโซน Featured Solutions — ปุ่ม View More ทั้งคู่เป็น <code>&lt;button&gt;</code> เปล่าๆ ไม่มี href ไม่มี onclick กดแล้วไม่ไปไหนเลย (คนละจุดกับการ์ด Highlight Products 4 ใบด้านล่างที่อย่างน้อยยังเป็นลิงก์จริง)</p>
+      <p class="fix">→ ต่อ EC Fan → <code>/products/refrigeration</code> · AHU/Fresh Air → <code>/products/ahu-ac-fresh-air</code></p>
+    </div>
+
+    <div class="ci med">
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอ IT แก้โค้ด</span><span class="verified">✓ verify live</span></div>
+      <div class="ci-title">ปุ่ม "About Us" (ในโซน home-intro) ไม่มีลิงก์</div>
+      <p>เช็คจาก DOM: เป็น <code>&lt;button&gt;</code> ไม่มี <code>&lt;a&gt;</code> ครอบ ไม่มี href ไม่มี onclick ในระยะ 4 ชั้น parent เลย (Figma ตั้งใจให้ลิงก์ <code>/about</code>)</p>
+      <p class="fix">→ ต่อ href <code>/about</code></p>
     </div>
 
     <div class="ci med">
@@ -67,6 +82,13 @@
       <div class="ci-top"><span class="sev med">Med</span><span class="verified">✓ verify live</span></div>
       <div class="ci-title">H1 ขาดเว้นวรรค — "Engineered to Transfer.Built to Last."</div>
       <p>สองประโยคติดกันในข้อความ (crawler อ่านเป็นคำเดียว "Transfer.Built") → ตรวจการตัดบรรทัด/เว้นวรรค</p>
+    </div>
+
+    <div class="ci med">
+      <div class="ci-top"><span class="sev med">Med</span><span class="verified">✓ verify live vs Figma</span></div>
+      <div class="ci-title">Font-size ไม่ตรง spec — description text การ์ด EC Fan</div>
+      <p>Figma spec (เช็คจาก layer "description-card1"): 13.3px Regular, line-height Auto, letter-spacing 0% — Live จริงวัดได้ <b>16px</b> (class <code>text-base md:text-lg</code> — ที่จอกว้างขึ้นจะยิ่งใหญ่กว่านี้อีก เพราะ responsive class ไม่ได้ lock 13.3px ไว้เลย) line-height 26px น้ำหนักฟอนต์ (400) ตรงกัน</p>
+      <p class="fix">→ ยังไม่รู้ว่าเป็นแค่จุดเดียวหรือทั้งเว็บใช้ scale ผิด ต้องเช็คจุดอื่นเทียบ Figma เพิ่มถึงจะสรุปได้ว่าควรแก้เป็น pattern หรือแก้เฉพาะจุด</p>
     </div>
 
     <div class="ci low">
@@ -163,10 +185,10 @@
     <h2><span class="num">3</span> สถานะงาน</h2>
     <table class="kv">
       <tr><td>เจ้าของ build</td><td>IT สร้างเอง</td></tr>
-      <tr><td>สถานะปัจจุบัน</td><td>ขึ้น live แล้ว · แก้แล้ว 3 จุด (push แล้ว รอ IT เอาไปแทน) · เหลือรอ IT/Ti 8 จุด</td></tr>
+      <tr><td>สถานะปัจจุบัน</td><td>ขึ้น live แล้ว · แก้แล้ว 3 จุด (push แล้ว รอ IT เอาไปแทน) · เหลือรอ IT/Ti 12 จุด</td></tr>
       <tr><td>แก้แล้ว push แล้ว</td><td>og:image · รูป 5 ไฟล์ใหญ่เกิน (lazy-load) · favicon — <a href="https://github.com/tikittisak/cib-website/tree/master/team-handoff/sprints/w32-sprint-3/new-for-it-this-sprint/home-images" target="_blank" rel="noopener">โหลดที่นี่</a></td></tr>
       <tr><td>ค้างรอ Ti ตัดสิน</td><td>industries 2 อัน (Commercial/Cleanroom) · Engineering app URL · URL casing · email footer</td></tr>
-      <tr><td>ค้างรอ IT แก้โค้ด</td><td>Stainless Steel card ผูกรูป/ลิงก์ผิด · industries 4 การ์ดลิงก์ผิด · H1 เว้นวรรค · heading h2→h3 · text ฝังในรูป (feature band)</td></tr>
+      <tr><td>ค้างรอ IT แก้โค้ด (8)</td><td>Stainless Steel card ผูกรูป/ลิงก์ผิด · industries 6 การ์ดกดไม่ได้เลย (แก้ไขจาก "4 ลิงก์ผิด") · View More ตาย 2 จุด (Featured Solutions) · About Us ปุ่มตาย · H1 เว้นวรรค · heading h2→h3 · text ฝังในรูป (feature band) · font-size ไม่ตรง spec</td></tr>
       <tr><td>อัปเดตล่าสุด</td><td>2026-08-27 · optimize รูป+favicon+og-image</td></tr>
     </table>
   </section>
@@ -181,6 +203,6 @@
     </ul>
   </section>
 
-  <footer class="scaffold-foot">Home node · audit 2026-08-27 · 10 ไฟล์แก้แล้ว push ขึ้น cib-website แล้ว (รอ IT เอาไปแทน) · รอ Ti ตัดสิน 4 จุด + IT แก้โค้ด 5 จุด</footer>
+  <footer class="scaffold-foot">Home node · audit 2026-08-27 · 10 ไฟล์แก้แล้ว push ขึ้น cib-website แล้ว (รอ IT เอาไปแทน) · รอ Ti ตัดสิน 4 จุด + IT แก้โค้ด 8 จุด</footer>
 </main>
 </body></html>
