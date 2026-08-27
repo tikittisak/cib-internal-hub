@@ -14,74 +14,134 @@
     <div class="hero-badges"><span class="badge owner-it">IT สร้างเอง</span><span class="pill st-wip">ขึ้นแล้ว · รอแก้</span></div>
     <h1>Home</h1>
     <a class="url" href="https://web.cigblusolutions.com/" target="_blank" rel="noopener">/ ↗</a>
-    <p class="hero-note">หน้าแรก bespoke — ขึ้น live แล้ว แต่มีจุดต้องแก้จาก audit 2026-08-27 (UX / UI / SEO / AI Crawler) — 2 High · 6 Medium · 3 Low</p>
+    <p class="hero-note">หน้าแรก bespoke — ขึ้น live แล้วแต่มีจุดต้องแก้จาก audit 2026-08-27 (UX/UI/SEO/AI Crawler)</p>
   </div>
 
   <section class="block">
-    <h2><span class="num">1</span> Change notes <span class="hint">Audit 2026-08-27 · เรียงตามความสำคัญ</span></h2>
-    <p class="muted" style="font-size:13px;margin:0 0 14px">อ่านยังไง: <strong>[สูง/กลาง/ต่ำ]</strong> = ความสำคัญ · <strong>✓ ยืนยันจาก live แล้ว</strong> = เช็คกับหน้าจริงแล้ว ไม่ใช่เดา · <strong>รอ Ti</strong> = ต้องให้ Ti ตัดสิน/ส่งไฟล์ก่อน IT ถึงจะทำได้</p>
+    <h2><span class="num">1</span> Change notes <span class="hint">Audit 2026-08-27</span></h2>
+    <p class="audit-meta"><b>อ่านยังไง:</b> <span class="verified">✓ verify live</span> = ยืนยันจากหน้าจริงวันนี้ · <span class="stt ok">ตกลงแล้ว</span> พร้อมส่ง IT · <span class="stt hold">รอเคาะ</span> รอ Ti ตัดสิน · <span class="stt wait">รอข้อมูล</span> รอไฟล์/URL</p>
 
-    <p><strong>UX — ลิงก์ / flow</strong></p>
-    <ul>
-      <li><strong>[สูง] ✓ ยืนยันจาก live แล้ว — การ์ด Highlight Products #4 "Stainless Steel Unit Cooler" ลิงก์ผิดตัวสินค้า:</strong> ปุ่ม View More ชี้ไป <code>/productsCatalog/r290-refrigeration-unit</code> ซ้ำกับการ์ด R290 (กดการ์ด Stainless Steel แล้วโผล่หน้า R290) → แก้ href การ์ด #4 เป็น <code>/productsCatalog/stainless-steel-unit-cooler</code></li>
-      <li><strong>[สูง] ✓ ยืนยันจาก live แล้ว — การ์ด Industries 4/6 ใบวิ่งไป imvera.co ผิดแบรนด์:</strong> Marine / Food / Commercial / Cleanroom ตอนนี้ลิงก์ <code>https://www.imvera.co</code> เหมือนกันหมด ทั้งที่ IMVERA ทำแค่ data center เท่านั้น ที่ถูกคือ:
-        <table class="kv" style="margin-top:8px">
-          <tr><td>Marine &amp; Offshore</td><td><code>/products/marine-application</code></td></tr>
-          <tr><td>Food Processing &amp; Cold Chain</td><td><code>/products/refrigeration</code></td></tr>
-          <tr><td>Data Center Cooling</td><td><code>imvera.co</code> — ถูกแล้ว คงไว้</td></tr>
-          <tr><td>IoT &amp; Smart Energy</td><td><code>/solutions/smart-solutions-iot</code> — ถูกแล้ว คงไว้</td></tr>
-          <tr><td>Commercial &amp; Industrial</td><td><code>/products/ahu-ac-fresh-air</code> <span class="muted">(รอ Ti ยืนยัน)</span></td></tr>
-          <tr><td>Cleanroom &amp; Pharma</td><td><code>/products/ahu-ac-fresh-air</code> <span class="muted">(รอ Ti ยืนยัน)</span></td></tr>
-        </table>
-      </li>
-      <li><strong>[กลาง] ✓ ยืนยันจาก live แล้ว — เมนู "Engineering" ใน nav ไม่มีลิงก์ (เมนูตาย):</strong> เช็คจาก DOM แล้วไม่มี <code>href</code> ไปหน้า <code>/engineering</code> เลยทั้งหน้า กดแล้วไม่ไปไหน → ต้องลิงก์ไป product selector app ที่ IT ทำ (รอ URL จาก Ti)</li>
-    </ul>
+    <!-- UX -->
+    <div class="dim">🧭 UX — ลิงก์ / flow</div>
 
-    <p><strong>UI — หน้าตา / โครง</strong></p>
-    <ul>
-      <li><strong>[ต่ำ] รอ path รูปจาก Ti — รูป lazy-load หนัก บาง section เห็นพื้นที่ว่างก่อนรูปมา:</strong> ยังไม่ปรับ optimize ให้ IT โหลดชุดที่ optimize แล้วจาก Resource ด้านล่างไปแทนของเดิม</li>
-      <li><strong>[กลาง] ✓ ยืนยันจาก live แล้ว — H1 ขาดเว้นวรรค:</strong> "Engineered to Transfer.Built to Last." สองประโยคติดกันไม่มีช่องว่าง (crawler อ่านเป็นคำเดียว "TransferBuilt") → แก้เว้นวรรคหลังจุด</li>
-    </ul>
+    <div class="ci high">
+      <div class="ci-top"><span class="sev high">High</span><span class="stt ok">ตกลงแล้ว</span><span class="verified">✓ verify live</span></div>
+      <div class="ci-title">การ์ด Highlight Products #4 "Stainless Steel Unit Cooler" ลิงก์ผิดตัวสินค้า</div>
+      <p>ปุ่ม View More ชี้ไป <code>/productsCatalog/r290-refrigeration-unit</code> ซ้ำกับการ์ด R290 → กดดู Stainless Steel ไปโผล่หน้า R290</p>
+      <p class="fix">→ แก้ href การ์ด #4 เป็น <code>/productsCatalog/stainless-steel-unit-cooler</code></p>
+    </div>
 
-    <p><strong>SEO</strong></p>
-    <ul>
-      <li><strong>[กลาง] รอรูปจาก Ti — <code>og:image</code> เป็น null (<code>twitter:image</code> ก็ null ด้วย) → แชร์ลิงก์ไม่มีรูป:</strong> แปะลิงก์หน้า Home ใน Line/Facebook ขึ้นกล่องเปล่า สเปกรูปที่ต้องทำ: 1200×630px พื้นขาว &lt;300KB ชื่อไฟล์ <code>og-home.jpg</code> — tag ให้ IT ใส่:
-        <pre class="code" style="background:#0b1220;color:#e7eefc;border-radius:8px;padding:12px 14px;font-size:12.5px;line-height:1.6;overflow:auto;margin-top:8px">&lt;meta property="og:image" content="https://www.cigblu.com/og-home.jpg"&gt;
+    <div class="ci high">
+      <div class="ci-top"><span class="sev high">High</span><span class="stt hold">รอเคาะ 2 อัน</span><span class="verified">✓ verify live</span></div>
+      <div class="ci-title">การ์ด Industries 4/6 ใบวิ่งไป imvera.co (ผิดแบรนด์)</div>
+      <p>Marine / Food / Commercial / Cleanroom ตอนนี้ลิงก์ <code>https://imvera.co</code> ทั้งหมด ทั้งที่ IMVERA ทำแค่ data center → ให้ชี้ไป product family ที่มีจริง:</p>
+      <table class="mini">
+        <tr><td>Marine &amp; Offshore</td><td class="good">/products/marine-application</td></tr>
+        <tr><td>Food Processing &amp; Cold Chain</td><td class="good">/products/refrigeration</td></tr>
+        <tr><td>Data Center Cooling</td><td class="good">imvera.co ✓ คงไว้</td></tr>
+        <tr><td>IoT &amp; Smart Energy</td><td class="good">/solutions/smart-solutions-iot ✓ คงไว้</td></tr>
+        <tr><td>Commercial &amp; Industrial</td><td class="hold2">/products/ahu-ac-fresh-air (รอยืนยัน)</td></tr>
+        <tr><td>Cleanroom &amp; Pharma</td><td class="hold2">/products/ahu-ac-fresh-air (รอยืนยัน)</td></tr>
+      </table>
+    </div>
+
+    <div class="ci med">
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอ URL</span><span class="verified">✓ verify live</span></div>
+      <div class="ci-title">เมนู "Engineering" ใน nav ไม่มีลิงก์ (เมนูตาย)</div>
+      <p>ยืนยันจาก DOM: ไม่มี href <code>/engineering</code> ทั้งหน้า กดแล้วไม่ไปไหน</p>
+      <p class="fix">→ ลิงก์ไป <b>product selector app</b> ที่ IT ทำ (รอ URL จาก Ti)</p>
+    </div>
+
+    <!-- UI -->
+    <div class="dim">🎨 UI — หน้าตา / โครง</div>
+
+    <div class="ci low">
+      <div class="ci-top"><span class="sev low">Low</span><span class="stt wait">รอ path รูป</span></div>
+      <div class="ci-title">รูป lazy-load หนัก บาง section scroll เจอจอขาวก่อนรูปมา</div>
+      <p>ทีมปรับรูป optimize แล้ว → ให้ IT โหลดไฟล์จากบล็อก Resource ด้านล่างไปแทนของเดิม (รอ path โฟลเดอร์รูปจาก Ti)</p>
+    </div>
+
+    <div class="ci med">
+      <div class="ci-top"><span class="sev med">Med</span><span class="verified">✓ verify live</span></div>
+      <div class="ci-title">H1 ขาดเว้นวรรค — "Engineered to Transfer.Built to Last."</div>
+      <p>สองประโยคติดกันในข้อความ (crawler อ่านเป็นคำเดียว "Transfer.Built") → ตรวจการตัดบรรทัด/เว้นวรรค</p>
+    </div>
+
+    <!-- SEO -->
+    <div class="dim">🔍 SEO</div>
+
+    <div class="ci med">
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอรูป</span><span class="verified">✓ verify live</span></div>
+      <div class="ci-title">og:image = null (twitter:image ก็ null) → แชร์ลิงก์ไม่มีรูป</div>
+      <p>แปะลิงก์ใน Line/FB ขึ้นกล่องเปล่า. Spec รูป: 1200×630 px, พื้นทึบ, &lt;300KB, ชื่อ <code>og-home.jpg</code>. Tag ให้ IT ใส่:</p>
+      <pre class="code">&lt;meta property="og:image" content="https://www.cigblu.com/og-home.jpg"&gt;
 &lt;meta property="og:image:width" content="1200"&gt;
 &lt;meta property="og:image:height" content="630"&gt;
 &lt;meta property="og:image:alt" content="CIG BluSolutions"&gt;
 &lt;meta name="twitter:card" content="summary_large_image"&gt;
 &lt;meta name="twitter:image" content="https://www.cigblu.com/og-home.jpg"&gt;</pre>
-      </li>
-      <li><strong>[กลาง] ✓ ยืนยันจาก live แล้ว — Heading ผิดลำดับ: ชื่อสินค้า 4 ตัวใน Highlight Products เป็น h2:</strong> D-COAT+, Heresite P-413, R290, Stainless Steel Unit Cooler ตอนนี้เป็น h2 ทั้งหมด → หัวข้อ "Highlight Products" คงเป็น h2 ส่วนชื่อสินค้า 4 ตัวเปลี่ยนจาก h2 เป็น h3 (หัวข้อย่อยต้องอยู่ใต้ h2 ไม่ใช่ h2 ซ้อน h2)</li>
-      <li><strong>[กลาง] รอ Ti เคาะ — URL สินค้าใช้ <code>/productsCatalog/&lt;slug&gt;</code> เป็น camelCase:</strong> path นี้แยกจาก static product pages อยู่แล้ว (ตั้งใจ decouple) แต่ตัว casing เป็น camelCase ไม่เข้าชุด kebab ที่เหลือทั้งเว็บ → ข้อเสนอ: คง decouple ไว้ แต่เปลี่ยนชื่อเป็น kebab เช่น <code>/products-catalog/&lt;slug&gt;</code> หรือ <code>/catalog/&lt;slug&gt;</code> (รอ Ti เคาะ)</li>
-      <li><strong>[ต่ำ] รอ verify — ไม่มี <code>sitemap.xml</code> / <code>robots.txt</code>:</strong> พบจาก UAT เดิม → generate + deploy</li>
-    </ul>
+    </div>
 
-    <p><strong>AI Crawler</strong></p>
-    <ul>
-      <li><strong>[กลาง] ✓ ยืนยันจาก live แล้ว — อีเมลใน footer ยังเป็น <code>contact@cigblusolutions.com</code>:</strong> มาตรฐานคือ <code>contact@cigblu.com</code> (ตัดสินแล้ว) → เปลี่ยนทุกจุด (footer + hero panel + JSON-LD) เหมือนที่แก้ใน prototype หน้า Contact ไปแล้ว — <strong>นี่คือ note เดียวกับที่ค้างจากหน้า Contact</strong> เพราะ footer เป็นไฟล์ verbatim ใช้ร่วมกันทุกหน้า แก้ที่ <code>site/site-shell/footer/footer.html</code> ทีเดียวจบทุกหน้า</li>
-      <li><strong>[ต่ำ] ✓ ยืนยันจาก live แล้ว — มี Organization JSON-LD แล้ว:</strong> เพิ่ม WebSite schema (+SearchAction) ให้ AI เข้าใจโครง site ทั้งเว็บ ไม่ใช่แค่หน้านี้</li>
-      <li><strong>[ต่ำ] รอ verify — ไม่มี <code>llms.txt</code>:</strong> พบจาก UAT เดิม → เพิ่ม</li>
-      <li><strong>สถานะดีอยู่แล้ว ✓ ยืนยันจาก live แล้ว:</strong> เนื้อหาเป็น HTML text จริง (ไม่ใช่รูป/canvas) · alt รูป 29/31 · title/description/canonical/robots ครบ — ส่วนนี้ไม่ต้องแก้</li>
-    </ul>
+    <div class="ci med">
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt ok">ตกลงแล้ว</span><span class="verified">✓ verify live</span></div>
+      <div class="ci-title">Heading ผิดชั้น — ชื่อสินค้า 4 ตัวเป็น h2</div>
+      <p>D-COAT+, Heresite P-413, R290, Stainless Steel Unit Cooler ตอนนี้เป็น <code>&lt;h2&gt;</code></p>
+      <p class="fix">→ IT: หัวข้อ "Highlight Products" คงเป็น <code>&lt;h2&gt;</code> · ชื่อสินค้า 4 ตัวเปลี่ยนจาก <code>&lt;h2&gt;</code> เป็น <code>&lt;h3&gt;</code> (หัวข้อย่อยต้องอยู่ใต้ h2 ไม่ใช่ h2 ซ้อน h2)</p>
+    </div>
+
+    <div class="ci med">
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt hold">รอเคาะ</span><span class="verified">✓ verify live</span></div>
+      <div class="ci-title">URL สินค้าใช้ <code>/productsCatalog/&lt;slug&gt;</code> — camelCase</div>
+      <p>การแยก path (static ไม่ผูกการเพิ่ม product) = ดีคงไว้ แต่ camelCase ไม่เข้าชุด kebab + เอกสารเคยเคาะเป็น <code>/products/catalog/</code></p>
+      <p class="fix">→ ข้อเสนอ: คง decoupling เปลี่ยนชื่อเป็น kebab <code>/products-catalog/</code> หรือ <code>/catalog/</code> (รอ Ti เคาะ)</p>
+    </div>
+
+    <div class="ci low">
+      <div class="ci-top"><span class="sev low">Low</span><span class="stt wait">รอ verify</span></div>
+      <div class="ci-title">ไม่มี sitemap.xml / robots.txt (จาก UAT) → generate + deploy</div>
+    </div>
+
+    <!-- AI Crawler -->
+    <div class="dim">🤖 AI Crawler</div>
+
+    <div class="ci med">
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt ok">ตกลงแล้ว</span><span class="verified">✓ verify live</span></div>
+      <div class="ci-title">email ใน footer ยังเป็น contact@cigblusolutions.com</div>
+      <p class="fix">→ เปลี่ยนเป็น <code>contact@cigblu.com</code> ทุกจุด (footer + panel + JSON-LD)</p>
+    </div>
+
+    <div class="ci low">
+      <div class="ci-top"><span class="sev low">Low</span><span class="verified">✓ verify live</span></div>
+      <div class="ci-title">มี Organization JSON-LD แล้ว → เพิ่ม WebSite schema (+SearchAction) ให้ AI เข้าใจโครง site</div>
+    </div>
+
+    <div class="ci low">
+      <div class="ci-top"><span class="sev low">Low</span><span class="stt wait">รอ verify</span></div>
+      <div class="ci-title">ไม่มี llms.txt (จาก UAT) → เพิ่ม</div>
+    </div>
+
+    <div class="ci low">
+      <div class="ci-top"><span class="stt ok">สถานะดี</span><span class="verified">✓ verify live</span></div>
+      <div class="ci-title">เนื้อหาเป็น HTML text จริง · alt รูป 29/31 · Title/desc/canonical/robots ครบถูก — ไม่ต้องแก้</div>
+    </div>
   </section>
 
   <section class="block">
     <h2><span class="num">2</span> Resource downloads <span class="hint">ไฟล์ให้ IT โหลด</span></h2>
-    <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/01-home-page-section-guide.html" target="_blank" rel="noopener">01-home-page-section-guide.html</a>
-    <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/sprints/w32-sprint-3/it-build-issues-by-page-th.md" target="_blank" rel="noopener">it-build-issues-by-page-th.md (UAT)</a>
-    <p class="muted" style="font-size:13px;margin:10px 0 0">ไฟล์อยู่ใน repo เว็บ private <code>cib-website</code> — IT/MKT ที่ login GitHub มีสิทธิ์อยู่แล้วโหลดได้ปกติ · <strong>it-build-issues-by-page-th.md ยังไม่ push ขึ้น repo</strong> ตอนนี้กดแล้วจะ 404 ชั่วคราว (รอ Ti confirm ให้ push)</p>
-    <p class="muted" style="font-size:13px;margin:8px 0 0">รอเพิ่มทีหลัง (Ti ยังไม่ส่ง): รูป Home ที่ optimize แล้ว (รอ path โฟลเดอร์) · <code>og-home.jpg</code> 1200×630 (รอ Ti ทำ)</p>
+    <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/01-home-page-section-guide.html" target="_blank" rel="noopener">📄 Home design guide (section-by-section)</a>
+    <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/sprints/w32-sprint-3/it-build-issues-by-page-th.md" target="_blank" rel="noopener">📄 UAT issues by page</a>
+    <a class="dl wait" href="#">🖼️ รูป optimize แล้ว (Home) — รอ path</a>
+    <a class="dl wait" href="#">🖼️ og-home.jpg 1200×630 — รอ Ti ทำส่ง</a>
+    <p class="small" style="margin-top:8px;color:var(--muted)">ปุ่มโหลดชี้ไฟล์จริงใน repo <code>cib-website</code> (private, branch <code>master</code>) — IT/MKT login GitHub กดโหลดได้ · <strong>UAT issues by page ยังไม่ push ขึ้น repo</strong> ตอนนี้กดแล้วจะ 404 ชั่วคราว (รอ Ti confirm ให้ push)</p>
   </section>
 
   <section class="block">
     <h2><span class="num">3</span> สถานะงาน</h2>
     <table class="kv">
       <tr><td>เจ้าของ build</td><td>IT สร้างเอง</td></tr>
-      <tr><td>สถานะปัจจุบัน</td><td>ขึ้น live แล้ว · รอแก้ (2 สูง · 6 กลาง · 3 ต่ำ)</td></tr>
-      <tr><td>ค้างรอ Ti</td><td>industries 2 อัน (Commercial/Cleanroom) · Engineering app URL · path รูป optimize · og-home.jpg · เคาะ URL casing</td></tr>
-      <tr><td>อัปเดตล่าสุด</td><td>2026-08-27 (audit จาก live)</td></tr>
+      <tr><td>สถานะปัจจุบัน</td><td>ขึ้น live แล้ว · รอแก้ (2 High · 6 Medium · 3 Low)</td></tr>
+      <tr><td>ค้างรอ Ti</td><td>industries 2 อัน · Engineering app URL · path รูป · og image · URL casing</td></tr>
+      <tr><td>อัปเดตล่าสุด</td><td>2026-08-27 (audit live)</td></tr>
     </table>
   </section>
 
@@ -89,12 +149,12 @@
     <h2><span class="num">4</span> ลิงก์อ้างอิง</h2>
     <ul class="refs">
       <li>Live (staging): <a href="https://web.cigblusolutions.com/" target="_blank" rel="noopener">https://web.cigblusolutions.com/</a></li>
-      <li>Live (final): <span class="muted">https://www.cigblu.com/</span> <span class="muted">(เมื่อย้าย domain)</span></li>
-      <li>Figma frame: <span class="muted">— ยังไม่มี —</span></li>
-      <li>ไฟล์ต้นทางใน repo: <a href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/01-home-page-section-guide.html" target="_blank" rel="noopener">team-handoff/01-home-page-section-guide.html</a></li>
+      <li>Live (final): <span class="muted">https://www.cigblu.com/ (เมื่อย้าย domain)</span></li>
+      <li>Figma frame: <span class="muted">— วางลิงก์ —</span></li>
+      <li>ต้นทางใน repo: <a href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/01-home-page-section-guide.html" target="_blank" rel="noopener">01-home-page-section-guide.html</a> · <a href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/sprints/w32-sprint-3/it-build-issues-by-page-th.md" target="_blank" rel="noopener">it-build-issues-by-page-th.md</a></li>
     </ul>
   </section>
 
-  <footer class="scaffold-foot">Home node · audit 2026-08-27 · รอ Ti ส่งของที่ค้าง (รูป/URL/เคาะ) มาเติมทับ</footer>
+  <footer class="scaffold-foot">Home node · audit 2026-08-27 · รอ Ti ส่งข้อมูลที่ค้างมาเติมทับ</footer>
 </main>
 </body></html>
