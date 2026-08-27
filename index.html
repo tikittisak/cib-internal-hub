@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dashboard · CIG Internal Hub</title>
+<link rel="stylesheet" href="assets/hub.css">
+</head>
+<body>
+<main class="wrap dash">
+  <div class="hero big">
+    <div class="hero-badges"><span class="badge tagline">internal hub</span></div>
+    <h1>CIG Internal Hub</h1>
+    <p class="hero-note">ศูนย์สื่อสาร IT ↔ MKT สำหรับเว็บ cigblu.com — หน้านี้มิเรอร์โครงเว็บจริง บอกว่าแต่ละหน้า
+    <strong>ต้องแก้อะไร · โหลด resource อะไร · สถานะแค่ไหน</strong> ในที่เดียว</p>
+    <p class="hero-sub">hub = ชั้น index (ไม่เก็บไฟล์ซ้ำ) · ปุ่มโหลดชี้ไฟล์จริงใน repo · โครงมาจาก target tree / สถานะมาจากเว็บ IT</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>16</b><span>หน้าทั้งหมด</span></div>
+    <div class="stat"><b>0</b><span>ขึ้นแล้ว</span></div>
+    <div class="stat"><b>1</b><span>กำลังทำ/แก้</span></div>
+    <div class="stat"><b>13</b><span>รอเช็ค</span></div>
+    <div class="stat"><b>1</b><span>รอ confirm</span></div>
+    <div class="stat"><b>1</b><span>ลิงก์ออก</span></div>
+  </div>
+
+  <div class="note-card">📌 สถานะตอนนี้เป็นค่าเริ่มต้น (scaffold) — จะไล่อัปเดตจริงตอนเปิดเว็บ IT เช็กทีละหน้า</div>
+
+  <table class="board">
+    <thead><tr><th>#</th><th>หน้า</th><th>URL จริง</th><th>เจ้าของ</th><th>สถานะ</th><th>resources</th></tr></thead>
+    <tbody>
+    <tr class="" onclick="location.href='home/index.html'">
+      <td class="num">1</td>
+      <td class="tt"><a href="home/index.html">Home</a></td>
+      <td><a class="url" href="https://web.cigblusolutions.com/" target="_blank" rel="noopener" onclick="event.stopPropagation()">/ ↗</a></td>
+      <td><span class="badge owner-it">IT-bespoke</span></td>
+      <td><span class="pill st-todo">รอเช็ค live</span></td>
+      <td class="muted">—</td>
+    </tr><tr class="" onclick="location.href='about/index.html'">
+      <td class="num">2</td>
+      <td class="tt"><a href="about/index.html">About us</a></td>
+      <td><a class="url" href="https://web.cigblusolutions.com/about" target="_blank" rel="noopener" onclick="event.stopPropagation()">/about ↗</a></td>
+      <td><span class="badge owner-it">IT-bespoke</span></td>
+      <td><span class="pill st-todo">รอเช็ค live</span></td>
+      <td class="muted">—</td>
+    </tr><tr class="" onclick="location.href='products/index.html'">
+      <td class="num">3</td>
+      <td class="tt"><a href="products/index.html">Products (overview)</a></td>
+      <td><a class="url" href="https://web.cigblusolutions.com/products" target="_blank" rel="noopener" onclick="event.stopPropagation()">/products ↗</a></td>
+      <td><span class="badge owner-it">IT-bespoke</span></td>
+      <td><span class="pill st-todo">รอเช็ค live</span></td>
+      <td class="muted">—</td>
+    </tr><tr class="child" onclick="location.href='products/coil-heat-exchanger/index.html'">
+      <td class="num">4</td>
+      <td class="tt">· <a href="products/coil-heat-exchanger/index.html">Coil &amp; Heat Exchanger</a></td>
+      <td><a class="url" href="https://web.cigblusolutions.com/products/coil-heat-exchanger" target="_blank" rel="noopener" onclick="event.stopPropagation()">/products/coil-heat-exchanger ↗</a></td>
+      <td><span class="badge owner-itcpk">IT + CPK</span></td>
+      <td><span class="pill st-todo">รอเช็ค live</span></td>
+      <td class="muted">—</td>
+    </tr><tr class="child" onclick="location.href='products/refrigeration/index.html'">
+      <td class="num">5</td>
+      <td class="tt">· <a href="products/refrigeration/index.html">Refrigeration</a></td>
+      <td><a class="url" href="https://web.cigblusolutions.com/products/refrigeration" target="_blank" rel="noopener" onclick="event.stopPropagation()">/products/refrigeration ↗</a></td>
+      <td><span class="badge owner-itcpk">IT + CPK</span></td>
+      <td><span class="pill st-todo">รอเช็ค live</span></td>
+      <td class="muted">—</td>
+    </tr><tr class="child" onclick="location.href='products/special-coating/index.html'">
+      <td class="num">6</td>
+      <td class="tt">· <a href="products/special-coating/index.html">Special Coating</a></td>
+      <td><a class="url" href="https://web.cigblusolutions.com/products/special-coating" target="_blank" rel="noopener" onclick="event.stopPropagation()">/products/special-coating ↗</a></td>
+      <td><span class="badge owner-itcpk">IT + CPK</span></td>
+      <td><span class="pill st-todo">รอเช็ค live</span></td>
+      <td class="muted">—</td>
+    </tr><tr class="child" onclick="location.href='products/ahu-ac-fresh-air/index.html'">
+      <td class="num">7</td>
+      <td class="tt">· <a href="products/ahu-ac-fresh-air/index.html">AHU / AC / Fresh Air</a></td>
+      <td><a class="url" href="https://web.cigblusolutions.com/products/ahu-ac-fresh-air" target="_blank" rel="noopener" onclick="event.stopPropagation()">/products/ahu-ac-fresh-air ↗</a></td>
+      <td><span class="badge owner-itcpk">IT + CPK</span></td>
+      <td><span class="pill st-todo">รอเช็ค live</span></td>
+      <td class="muted">—</td>
+    </tr><tr class="child" onclick="location.href='products/marine-application/index.html'">
+      <td class="num">8</td>
+      <td class="tt">· <a href="products/marine-application/index.html">Marine Application</a></td>
+      <td><a class="url" href="https://web.cigblusolutions.com/products/marine-application" target="_blank" rel="noopener" onclick="event.stopPropagation()">/products/marine-application ↗</a></td>
+      <td><span class="badge owner-it">IT-bespoke</span></td>
+      <td><span class="pill st-todo">รอเช็ค live</span></td>
+      <td class="muted">—</td>
+    </tr><tr class="child" onclick="location.href='products/data-center-cooling/index.html'">
+      <td class="num">9</td>
+      <td class="tt">· <a href="products/data-center-cooling/index.html">Data Center Cooling</a></td>
+      <td><a class="url" href="https://www.imvera.co" target="_blank" rel="noopener" onclick="event.stopPropagation()">https://www.imvera.co ↗</a></td>
+      <td><span class="badge owner-cross">cross-brand</span></td>
+      <td><span class="pill st-external">ลิงก์ออก</span></td>
+      <td class="muted">—</td>
+    </tr><tr class="child" onclick="location.href='products/catalog/index.html'">
+      <td class="num">10</td>
+      <td class="tt">· <a href="products/catalog/index.html">Products catalog</a></td>
+      <td><a class="url" href="https://web.cigblusolutions.com/products/catalog/" target="_blank" rel="noopener" onclick="event.stopPropagation()">/products/catalog/ ↗</a></td>
+      <td><span class="badge owner-cpk">CPK studio</span></td>
+      <td><span class="pill st-todo">รอเช็ค live</span></td>
+      <td class="muted">—</td>
+    </tr><tr class="" onclick="location.href='solutions/index.html'">
+      <td class="num">11</td>
+      <td class="tt"><a href="solutions/index.html">Solutions</a></td>
+      <td><a class="url" href="https://web.cigblusolutions.com/solutions" target="_blank" rel="noopener" onclick="event.stopPropagation()">/solutions ↗</a></td>
+      <td><span class="badge owner-cpk">CPK studio</span></td>
+      <td><span class="pill st-todo">รอเช็ค live</span></td>
+      <td class="muted">—</td>
+    </tr><tr class="" onclick="location.href='projects/index.html'">
+      <td class="num">12</td>
+      <td class="tt"><a href="projects/index.html">Projects</a></td>
+      <td><a class="url" href="https://web.cigblusolutions.com/projects" target="_blank" rel="noopener" onclick="event.stopPropagation()">/projects ↗</a></td>
+      <td><span class="badge owner-cpk">CPK studio</span></td>
+      <td><span class="pill st-todo">รอเช็ค live</span></td>
+      <td class="muted">—</td>
+    </tr><tr class="" onclick="location.href='engineering/index.html'">
+      <td class="num">13</td>
+      <td class="tt"><a href="engineering/index.html">Engineering</a></td>
+      <td><a class="url" href="https://web.cigblusolutions.com/engineering" target="_blank" rel="noopener" onclick="event.stopPropagation()">/engineering ↗</a></td>
+      <td><span class="badge owner-it">IT-bespoke</span></td>
+      <td><span class="pill st-confirm">รอ confirm</span></td>
+      <td class="muted">—</td>
+    </tr><tr class="" onclick="location.href='insights/index.html'">
+      <td class="num">14</td>
+      <td class="tt"><a href="insights/index.html">Insights</a></td>
+      <td><a class="url" href="https://web.cigblusolutions.com/insights/" target="_blank" rel="noopener" onclick="event.stopPropagation()">/insights/ ↗</a></td>
+      <td><span class="badge owner-cpk">CPK studio</span></td>
+      <td><span class="pill st-todo">รอเช็ค live</span></td>
+      <td class="muted">—</td>
+    </tr><tr class="child" onclick="location.href='insights/news-events/index.html'">
+      <td class="num">15</td>
+      <td class="tt">· <a href="insights/news-events/index.html">News &amp; Events</a></td>
+      <td><a class="url" href="https://web.cigblusolutions.com/insights/news-events/" target="_blank" rel="noopener" onclick="event.stopPropagation()">/insights/news-events/ ↗</a></td>
+      <td><span class="badge owner-cpk">CPK studio</span></td>
+      <td><span class="pill st-todo">รอเช็ค live</span></td>
+      <td class="muted">—</td>
+    </tr><tr class="" onclick="location.href='contact/index.html'">
+      <td class="num">16</td>
+      <td class="tt"><a href="contact/index.html">Contact</a></td>
+      <td><a class="url" href="https://web.cigblusolutions.com/contact" target="_blank" rel="noopener" onclick="event.stopPropagation()">/contact ↗</a></td>
+      <td><span class="badge owner-it">IT-bespoke</span></td>
+      <td><span class="pill st-wip">กำลังทำ/ต้องแก้</span></td>
+      <td class="muted">—</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <footer class="scaffold-foot">scaffold เปล่า · 16 หน้า · model pages / L3 จะแตกทีหลังต่อ family</footer>
+</main>
+</body></html>
