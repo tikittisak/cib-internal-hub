@@ -14,29 +14,26 @@
     <div class="hero-badges"><span class="badge owner-it">IT สร้างเอง</span><span class="pill st-wip">ขึ้นแล้ว · รอแก้</span></div>
     <h1>Home</h1>
     <a class="url" href="https://web.cigblusolutions.com/" target="_blank" rel="noopener">/ ↗</a>
-    <p class="hero-note">หน้าแรก bespoke — ขึ้น live แล้วแต่มีจุดต้องแก้จาก audit 2026-08-27 (UX/UI/SEO/AI Crawler)</p>
+    <p class="hero-note">หน้าแรก bespoke — ขึ้น live แล้ว มี 12 จุดต้องแก้ (audit 2026-08-27)</p>
   </div>
 
   <section class="block">
     <h2><span class="num">1</span> Change notes <span class="hint">Audit 2026-08-27</span></h2>
-    <p class="audit-meta"><b>อ่านยังไง:</b> <span class="verified">✓ verify live</span> = ยืนยันจากหน้าจริงวันนี้ · <span class="stt ok">ตกลงแล้ว</span> พร้อมส่ง IT · <span class="stt hold">รอเคาะ</span> รอ Ti ตัดสิน · <span class="stt wait">รอข้อมูล</span> รอไฟล์/URL · <span class="stt ok">✓ แก้แล้ว</span> ไฟล์พร้อมแล้ว รอ IT เอาไปแทน</p>
-    <p class="audit-meta" style="background:#e8f7ee;border-color:#bfe6cc"><b>✅ แก้แล้ว (2026-08-27, push ขึ้น repo แล้ว):</b> og:image หาย · รูป 5 ไฟล์ใหญ่เกิน (สาเหตุ lazy-load หนัก) · favicon เป็น placeholder ทั่วไป — โหลดไฟล์ได้ที่ block 2 ด้านล่าง</p>
+    <p class="audit-meta"><span class="stt ok">✓ แก้แล้ว</span> โหลดไฟล์ได้เลย · <span class="stt hold">รอเคาะ</span> รอ Ti · <span class="stt wait">รอ IT</span> รอแก้โค้ด</p>
 
     <!-- UX -->
     <div class="dim">🧭 UX — ลิงก์ / flow</div>
 
     <div class="ci high">
-      <div class="ci-top"><span class="sev high">High</span><span class="stt ok">ตกลงแล้ว</span><span class="verified">✓ verify live</span></div>
-      <div class="ci-title">การ์ด Highlight Products #4 "Stainless Steel Unit Cooler" ลิงก์ผิดตัวสินค้า</div>
-      <p>ปุ่ม View More ชี้ไป <code>/productsCatalog/r290-refrigeration-unit</code> ซ้ำกับการ์ด R290 → กดดู Stainless Steel ไปโผล่หน้า R290</p>
-      <p class="fix">→ แก้ href การ์ด #4 เป็น <code>/productsCatalog/stainless-steel-unit-cooler</code></p>
+      <div class="ci-top"><span class="sev high">High</span></div>
+      <div class="ci-title">การ์ด Stainless Steel Unit Cooler ลิงก์ผิด (ชี้ไป R290)</div>
+      <p class="fix">→ แก้เป็น <code>/productsCatalog/stainless-steel-unit-cooler</code></p>
     </div>
 
     <div class="ci high">
-      <div class="ci-top"><span class="sev high">High</span><span class="stt hold">รอเคาะ 2 อัน</span><span class="verified">✓ verify live 2026-08-27</span></div>
-      <div class="ci-title">แก้ไข: การ์ด Industries ทั้ง 6 ใบไม่มีลิงก์เลยสักใบ (ไม่ใช่ "4/6 ไปผิดที่" แบบที่เคยบันทึกไว้)</div>
-      <p><b>ตรวจซ้ำจริงจาก DOM วันนี้ (ก่อนหน้านี้บันทึกผิด):</b> เช็คทุกใบ (Marine, Food, Data Center, IoT, และอื่นๆ) ไม่มีใบไหนเป็น <code>&lt;a&gt;</code> หรือมี <code>&lt;button&gt;</code> อยู่ข้างในเลย — จำลอง click ตรงๆ ด้วย ก็ไม่มีอะไรเกิดขึ้น (URL ไม่เปลี่ยน ไม่มี tab ใหม่) สรุปคือ <b>การ์ดทั้ง 6 ใบกดไม่ได้เลยตอนนี้</b> ไม่ใช่แค่ลิงก์ผิดที่</p>
-      <p>Target ที่ควรจะเป็น (สำหรับตอน IT ต่อลิงก์):</p>
+      <div class="ci-top"><span class="sev high">High</span><span class="stt hold">รอเคาะ 2 อัน</span></div>
+      <div class="ci-title">การ์ด Industries ทั้ง 6 ใบกดไม่ได้เลย (ไม่ใช่ลิงก์ผิด — ไม่มีลิงก์)</div>
+      <p class="fix">→ ใส่ลิงก์ตามนี้:</p>
       <table class="mini">
         <tr><td>Marine &amp; Offshore</td><td class="good">/products/marine-application</td></tr>
         <tr><td>Food Processing &amp; Cold Chain</td><td class="good">/products/refrigeration</td></tr>
@@ -48,63 +45,57 @@
     </div>
 
     <div class="ci high">
-      <div class="ci-top"><span class="sev high">High</span><span class="stt wait">รอ IT แก้โค้ด</span><span class="verified">✓ verify live</span></div>
-      <div class="ci-title">ปุ่ม "View More" ตาย 2 จุดใน Featured Solutions (EC Fan + AHU/Fresh Air)</div>
-      <p>การ์ด "EC FAN Air Cooled Condenser" และ "Custom Design for Replacement Project / AHU Fresh Air Unit" ในโซน Featured Solutions — ปุ่ม View More ทั้งคู่เป็น <code>&lt;button&gt;</code> เปล่าๆ ไม่มี href ไม่มี onclick กดแล้วไม่ไปไหนเลย (คนละจุดกับการ์ด Highlight Products 4 ใบด้านล่างที่อย่างน้อยยังเป็นลิงก์จริง)</p>
-      <p class="fix">→ ต่อ EC Fan → <code>/products/refrigeration</code> · AHU/Fresh Air → <code>/products/ahu-ac-fresh-air</code></p>
+      <div class="ci-top"><span class="sev high">High</span><span class="stt wait">รอ IT</span></div>
+      <div class="ci-title">ปุ่ม View More ตาย 2 จุด — EC Fan, AHU/Fresh Air (Featured Solutions)</div>
+      <p class="fix">→ EC Fan → <code>/products/refrigeration</code> · AHU/Fresh Air → <code>/products/ahu-ac-fresh-air</code></p>
     </div>
 
     <div class="ci med">
-      <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอ IT แก้โค้ด</span><span class="verified">✓ verify live</span></div>
-      <div class="ci-title">ปุ่ม "About Us" (ในโซน home-intro) ไม่มีลิงก์</div>
-      <p>เช็คจาก DOM: เป็น <code>&lt;button&gt;</code> ไม่มี <code>&lt;a&gt;</code> ครอบ ไม่มี href ไม่มี onclick ในระยะ 4 ชั้น parent เลย (Figma ตั้งใจให้ลิงก์ <code>/about</code>)</p>
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอ IT</span></div>
+      <div class="ci-title">ปุ่ม About Us ไม่มีลิงก์</div>
       <p class="fix">→ ต่อ href <code>/about</code></p>
     </div>
 
     <div class="ci med">
-      <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอ URL</span><span class="verified">✓ verify live</span></div>
-      <div class="ci-title">เมนู "Engineering" ใน nav ไม่มีลิงก์ (เมนูตาย)</div>
-      <p>ยืนยันจาก DOM: ไม่มี href <code>/engineering</code> ทั้งหน้า กดแล้วไม่ไปไหน</p>
-      <p class="fix">→ ลิงก์ไป <b>product selector app</b> ที่ IT ทำ (รอ URL จาก Ti)</p>
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt hold">รอ URL จาก Ti</span></div>
+      <div class="ci-title">เมนู Engineering ไม่มีลิงก์</div>
+      <p class="fix">→ ลิงก์ไป product selector app ที่ IT ทำ</p>
     </div>
 
     <!-- UI -->
     <div class="dim">🎨 UI — หน้าตา / โครง</div>
 
     <div class="ci low">
-      <div class="ci-top"><span class="sev low">Low</span><span class="stt ok">✓ แก้แล้ว</span><span class="verified">✓ verify live</span></div>
-      <div class="ci-title">รูป lazy-load หนัก บาง section scroll เจอจอขาวก่อนรูปมา</div>
-      <p>เช็คจาก DOM จริงแล้วเจอสาเหตุ: 5 ไฟล์ถูก serve ใหญ่กว่าที่ render จริง 4-11 เท่า (เช่น <code>home-industry-iot-smart-energy.png</code> ต้นฉบับ 10.8MB ทั้งที่โชว์แค่ 347×691px) รวม ~36MB</p>
-      <p class="fix">→ resize ตาม render size จริง (2x retina) + แปลง .webp แล้ว เหลือ ~886KB รวม (ลด 97.5%) — ไฟล์อยู่ block 2 push แล้ว</p>
+      <div class="ci-top"><span class="sev low">Low</span><span class="stt ok">✓ แก้แล้ว</span></div>
+      <div class="ci-title">รูปหนักเกิน ทำเว็บโหลดช้า (36MB → 886KB)</div>
+      <p class="fix">→ โหลดไฟล์ใหม่ที่ block 2</p>
     </div>
 
     <div class="ci med">
-      <div class="ci-top"><span class="sev med">Med</span><span class="verified">✓ verify live</span></div>
-      <div class="ci-title">H1 ขาดเว้นวรรค — "Engineered to Transfer.Built to Last."</div>
-      <p>สองประโยคติดกันในข้อความ (crawler อ่านเป็นคำเดียว "Transfer.Built") → ตรวจการตัดบรรทัด/เว้นวรรค</p>
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอ IT</span></div>
+      <div class="ci-title">H1 ขาดเว้นวรรค — "Transfer.Built"</div>
+      <p class="fix">→ เติมช่องว่างหลัง "Transfer."</p>
     </div>
 
     <div class="ci med">
-      <div class="ci-top"><span class="sev med">Med</span><span class="verified">✓ verify live vs Figma</span></div>
-      <div class="ci-title">Font-size ไม่ตรง spec — description text การ์ด EC Fan</div>
-      <p>Figma spec (เช็คจาก layer "description-card1"): 13.3px Regular, line-height Auto, letter-spacing 0% — Live จริงวัดได้ <b>16px</b> (class <code>text-base md:text-lg</code> — ที่จอกว้างขึ้นจะยิ่งใหญ่กว่านี้อีก เพราะ responsive class ไม่ได้ lock 13.3px ไว้เลย) line-height 26px น้ำหนักฟอนต์ (400) ตรงกัน</p>
-      <p class="fix">→ ยังไม่รู้ว่าเป็นแค่จุดเดียวหรือทั้งเว็บใช้ scale ผิด ต้องเช็คจุดอื่นเทียบ Figma เพิ่มถึงจะสรุปได้ว่าควรแก้เป็น pattern หรือแก้เฉพาะจุด</p>
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอ IT</span></div>
+      <div class="ci-title">Font-size ผิด spec — การ์ด EC Fan (Figma 13.3px, live 16px)</div>
+      <p class="fix">→ แก้ font-size ให้ตรง 13.3px</p>
     </div>
 
     <div class="ci low">
-      <div class="ci-top"><span class="sev low">Low</span><span class="stt ok">✓ แก้แล้ว</span><span class="verified">✓ verify live</span></div>
-      <div class="ci-title">Favicon เป็น placeholder ทั่วไป ไม่ใช่แบรนด์ CIG เลย (วงกลมดำ+สามเหลี่ยมขาว)</div>
-      <p>เช็คจริง: มี <code>&lt;link rel="icon"&gt;</code> ชี้ไป <code>favicon.ico</code> จริง แต่ไฟล์ข้างในเป็น generic placeholder ไม่มีแบรนด์เลย · เช็ค <code>icon.png</code> ด้วย เป็นกราฟิก crosshair ที่ไม่ได้ใช้งานจริง</p>
-      <p class="fix">→ ทำจากโลโก้จริง (ตัดเหลือแค่สัญลักษณ์ O) เป็นชุด <code>favicon.ico</code> (16/32/48/256) + <code>icon-192/512.png</code> + <code>apple-touch-icon.png</code> แล้ว อยู่ block 2 push แล้ว</p>
+      <div class="ci-top"><span class="sev low">Low</span><span class="stt ok">✓ แก้แล้ว</span></div>
+      <div class="ci-title">Favicon เป็น placeholder ทั่วไป ไม่ใช่แบรนด์ CIG</div>
+      <p class="fix">→ โหลดไฟล์ใหม่ที่ block 2</p>
     </div>
 
     <!-- SEO -->
     <div class="dim">🔍 SEO</div>
 
     <div class="ci med">
-      <div class="ci-top"><span class="sev med">Med</span><span class="stt ok">✓ แก้แล้ว</span><span class="verified">✓ verify live</span></div>
-      <div class="ci-title">og:image = null (twitter:image ก็ null) → แชร์ลิงก์ไม่มีรูป</div>
-      <p>แปะลิงก์ใน Line/FB ขึ้นกล่องเปล่า — ยืนยันจริงว่า <code>&lt;meta property="og:image"&gt;</code> ไม่มีในหน้าเลย ไม่ใช่แค่ broken link. <code>og-home.jpg</code> (1200×630, รูปสินค้าจริง 4 ตัว + โลโก้ + tagline, 145KB) ทำเสร็จแล้ว push แล้ว อยู่ block 2. Tag ให้ IT ใส่:</p>
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt ok">✓ แก้แล้ว</span></div>
+      <div class="ci-title">og:image หาย → แชร์ลิงก์ไม่มีรูป</div>
+      <p class="fix">→ โหลด <code>og-home.jpg</code> ที่ block 2 + ใส่ tag นี้:</p>
       <pre class="code">&lt;meta property="og:image" content="https://www.cigblu.com/og-home.jpg"&gt;
 &lt;meta property="og:image:width" content="1200"&gt;
 &lt;meta property="og:image:height" content="630"&gt;
@@ -114,82 +105,71 @@
     </div>
 
     <div class="ci med">
-      <div class="ci-top"><span class="sev med">Med</span><span class="stt ok">ตกลงแล้ว</span><span class="verified">✓ verify live</span></div>
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอ IT</span></div>
       <div class="ci-title">Heading ผิดชั้น — ชื่อสินค้า 4 ตัวเป็น h2</div>
-      <p>D-COAT+, Heresite P-413, R290, Stainless Steel Unit Cooler ตอนนี้เป็น <code>&lt;h2&gt;</code></p>
-      <p class="fix">→ IT: หัวข้อ "Highlight Products" คงเป็น <code>&lt;h2&gt;</code> · ชื่อสินค้า 4 ตัวเปลี่ยนจาก <code>&lt;h2&gt;</code> เป็น <code>&lt;h3&gt;</code> (หัวข้อย่อยต้องอยู่ใต้ h2 ไม่ใช่ h2 ซ้อน h2)</p>
+      <p class="fix">→ เปลี่ยนเป็น h3 (h2 คงไว้ที่ "Highlight Products")</p>
     </div>
 
     <div class="ci med">
-      <div class="ci-top"><span class="sev med">Med</span><span class="stt hold">รอเคาะ</span><span class="verified">✓ verify live</span></div>
-      <div class="ci-title">URL สินค้าใช้ <code>/productsCatalog/&lt;slug&gt;</code> — camelCase</div>
-      <p>การแยก path (static ไม่ผูกการเพิ่ม product) = ดีคงไว้ แต่ camelCase ไม่เข้าชุด kebab + เอกสารเคยเคาะเป็น <code>/products/catalog/</code></p>
-      <p class="fix">→ ข้อเสนอ: คง decoupling เปลี่ยนชื่อเป็น kebab <code>/products-catalog/</code> หรือ <code>/catalog/</code> (รอ Ti เคาะ)</p>
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt hold">รอเคาะ</span></div>
+      <div class="ci-title">URL สินค้าเป็น camelCase — <code>/productsCatalog/&lt;slug&gt;</code></div>
+      <p class="fix">→ เปลี่ยนเป็น kebab <code>/products-catalog/</code> หรือ <code>/catalog/</code></p>
     </div>
 
     <div class="ci low">
-      <div class="ci-top"><span class="sev low">Low</span><span class="stt wait">รอ verify</span></div>
-      <div class="ci-title">ไม่มี sitemap.xml / robots.txt (จาก UAT) → generate + deploy</div>
+      <div class="ci-top"><span class="sev low">Low</span></div>
+      <div class="ci-title">ไม่มี sitemap.xml / robots.txt</div>
+      <p class="fix">→ generate + deploy</p>
     </div>
 
     <!-- AI Crawler -->
     <div class="dim">🤖 AI Crawler</div>
 
     <div class="ci med">
-      <div class="ci-top"><span class="sev med">Med</span><span class="stt ok">ตกลงแล้ว</span><span class="verified">✓ verify live</span></div>
-      <div class="ci-title">email ใน footer ยังเป็น contact@cigblusolutions.com</div>
-      <p class="fix">→ เปลี่ยนเป็น <code>contact@cigblu.com</code> ทุกจุด (footer + panel + JSON-LD)</p>
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt hold">รอ Ti</span></div>
+      <div class="ci-title">Email footer ยังเป็น contact@cigblusolutions.com</div>
+      <p class="fix">→ เปลี่ยนเป็น <code>contact@cigblu.com</code> ทุกจุด</p>
     </div>
 
     <div class="ci med">
-      <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอ IT แก้โค้ด</span><span class="verified">✓ verify live</span></div>
-      <div class="ci-title">Text ฝังอยู่ในรูปภาพ — ไม่ใช่ HTML text</div>
-      <p>รูปแบนเนอร์ (เดิมชื่อ <code>Frame 15979.jpg</code>, alt ซ้ำกับ hero "Heat Exchanger Special Coating") มีข้อความ "RELIABLE PERFORMANCE WITH MEASURABLE ROI" วาดฝังอยู่ในพิกเซลรูปเลย ไม่ใช่ HTML text — ขัดกับกฎที่ SEO-META ของหน้านี้เขียนไว้เองว่า "Business-critical text must remain HTML text"</p>
-      <p class="fix">→ ต้องแยกข้อความออกมาเป็น HTML overlay ให้ IT — resize รูปอย่างเดียวแก้ไม่ได้ (บีบไฟล์ให้เล็กลงแล้ว แต่ปัญหานี้ยังอยู่ ดู block 2)</p>
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอ IT</span></div>
+      <div class="ci-title">Text ฝังในรูป (feature band) — ไม่ใช่ HTML text</div>
+      <p class="fix">→ แยกเป็น HTML overlay (บีบไฟล์แล้ว แต่ปัญหานี้ยังอยู่)</p>
     </div>
 
     <div class="ci low">
-      <div class="ci-top"><span class="sev low">Low</span><span class="verified">✓ verify live</span></div>
-      <div class="ci-title">มี Organization JSON-LD แล้ว → เพิ่ม WebSite schema (+SearchAction) ให้ AI เข้าใจโครง site</div>
+      <div class="ci-top"><span class="sev low">Low</span></div>
+      <div class="ci-title">เพิ่ม WebSite schema (+SearchAction) ใน JSON-LD</div>
     </div>
 
     <div class="ci low">
-      <div class="ci-top"><span class="sev low">Low</span><span class="stt wait">รอ verify</span></div>
-      <div class="ci-title">ไม่มี llms.txt (จาก UAT) → เพิ่ม</div>
+      <div class="ci-top"><span class="sev low">Low</span></div>
+      <div class="ci-title">ไม่มี llms.txt</div>
+      <p class="fix">→ เพิ่ม</p>
     </div>
 
     <div class="ci low">
-      <div class="ci-top"><span class="stt ok">สถานะดี</span><span class="verified">✓ verify live</span></div>
-      <div class="ci-title">เนื้อหาเป็น HTML text จริง · alt รูป 29/31 · Title/desc/canonical/robots ครบถูก — ไม่ต้องแก้</div>
+      <div class="ci-top"><span class="stt ok">สถานะดี</span></div>
+      <div class="ci-title">SEO พื้นฐาน (text/alt/title/canonical) ผ่านหมด — ไม่ต้องแก้</div>
     </div>
   </section>
 
   <section class="block">
     <h2><span class="num">2</span> Resource downloads <span class="hint">ไฟล์ให้ IT โหลด</span></h2>
-    <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/01-home-page-section-guide.html" target="_blank" rel="noopener">📄 Home design guide (section-by-section)</a>
+    <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/01-home-page-section-guide.html" target="_blank" rel="noopener">📄 Home design guide</a>
     <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/sprints/w32-sprint-3/it-build-issues-by-page-th.md" target="_blank" rel="noopener">📄 UAT issues by page</a>
-    <p class="small" style="margin-top:8px;color:var(--muted)">ปุ่มโหลดชี้ไฟล์จริงใน repo <code>cib-website</code> (private, branch <code>master</code>) — IT/MKT login GitHub กดโหลดได้ · <strong>UAT issues by page ยังไม่ push ขึ้น repo</strong> ตอนนี้กดแล้วจะ 404 ชั่วคราว (รอ Ti confirm ให้ push)</p>
-
-    <p class="audit-meta" style="margin-top:16px;background:#e8f7ee;border-color:#bfe6cc"><b>✅ ไฟล์รูปพร้อมแล้ว 10 ไฟล์ (2026-08-27, push แล้ว)</b> — เช็ค render size จริงจาก DOM ก่อนทำ ไม่ใช่เดา · commit <code>3300474</code></p>
-    <a class="dl" href="https://github.com/tikittisak/cib-website/tree/master/team-handoff/sprints/w32-sprint-3/new-for-it-this-sprint/home-images" target="_blank" rel="noopener">📁 home-images/ — โฟลเดอร์รวมทั้งหมด</a>
-    <table class="mini">
-      <tr><td>รูป industries ×4 (.webp)</td><td class="good">แทนของเดิม 1:1 — เดิม 6.3-10.8MB → เหลือ 43-297KB</td></tr>
-      <tr><td>home-feature-band.webp</td><td class="hold2">บีบขนาดแล้ว แต่ยังมี text ฝังในรูป (ดู block 1)</td></tr>
-      <tr><td>og-home.jpg (1200×630)</td><td class="good">ทำใหม่ทั้งหมด — รูปสินค้าจริง 4 ตัว + โลโก้ + tagline, Ti เป็นคนทำเวอร์ชันสุดท้าย</td></tr>
-      <tr><td>favicon.ico + icon-192/512.png + apple-touch-icon.png</td><td class="good">แทน placeholder เดิม</td></tr>
-    </table>
-    <p class="small" style="margin-top:8px;color:var(--muted)">รายละเอียด old→new filename ครบใน <code>home-images/README.md</code> ในโฟลเดอร์เดียวกัน</p>
+    <a class="dl" href="https://github.com/tikittisak/cib-website/tree/master/team-handoff/sprints/w32-sprint-3/new-for-it-this-sprint/home-images" target="_blank" rel="noopener">📁 home-images/ — รูป+og-image+favicon (10 ไฟล์)</a>
+    <p class="small" style="margin-top:8px;color:var(--muted)">IT/MKT login GitHub โหลดได้เลย · UAT issues by page ยังไม่ push (รอ Ti confirm)</p>
   </section>
 
   <section class="block">
     <h2><span class="num">3</span> สถานะงาน</h2>
     <table class="kv">
       <tr><td>เจ้าของ build</td><td>IT สร้างเอง</td></tr>
-      <tr><td>สถานะปัจจุบัน</td><td>ขึ้น live แล้ว · แก้แล้ว 3 จุด (push แล้ว รอ IT เอาไปแทน) · เหลือรอ IT/Ti 12 จุด</td></tr>
-      <tr><td>แก้แล้ว push แล้ว</td><td>og:image · รูป 5 ไฟล์ใหญ่เกิน (lazy-load) · favicon — <a href="https://github.com/tikittisak/cib-website/tree/master/team-handoff/sprints/w32-sprint-3/new-for-it-this-sprint/home-images" target="_blank" rel="noopener">โหลดที่นี่</a></td></tr>
-      <tr><td>ค้างรอ Ti ตัดสิน</td><td>industries 2 อัน (Commercial/Cleanroom) · Engineering app URL · URL casing · email footer</td></tr>
-      <tr><td>ค้างรอ IT แก้โค้ด (8)</td><td>Stainless Steel card ผูกรูป/ลิงก์ผิด · industries 6 การ์ดกดไม่ได้เลย (แก้ไขจาก "4 ลิงก์ผิด") · View More ตาย 2 จุด (Featured Solutions) · About Us ปุ่มตาย · H1 เว้นวรรค · heading h2→h3 · text ฝังในรูป (feature band) · font-size ไม่ตรง spec</td></tr>
-      <tr><td>อัปเดตล่าสุด</td><td>2026-08-27 · optimize รูป+favicon+og-image</td></tr>
+      <tr><td>สถานะปัจจุบัน</td><td>ขึ้น live แล้ว · แก้แล้ว 3 จุด (รอ IT เอาไปแทน) · เหลือ 12 จุด</td></tr>
+      <tr><td>รอ Ti ตัดสิน</td><td>industries 2 อัน · Engineering URL · URL casing · email footer</td></tr>
+      <tr><td>รอ IT แก้โค้ด</td><td>Stainless Steel · industries 6 การ์ด · View More ×2 · About Us · H1 · heading h2→h3 · text ฝังในรูป · font-size</td></tr>
+      <tr><td>อัปเดตล่าสุด</td><td>2026-08-27</td></tr>
     </table>
   </section>
 
@@ -203,6 +183,6 @@
     </ul>
   </section>
 
-  <footer class="scaffold-foot">Home node · audit 2026-08-27 · 10 ไฟล์แก้แล้ว push ขึ้น cib-website แล้ว (รอ IT เอาไปแทน) · รอ Ti ตัดสิน 4 จุด + IT แก้โค้ด 8 จุด</footer>
+  <footer class="scaffold-foot">Home node · audit 2026-08-27 · 3 จุดแก้แล้ว · รอ Ti 4 จุด + รอ IT 8 จุด</footer>
 </main>
 </body></html>
