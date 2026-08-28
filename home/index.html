@@ -80,6 +80,12 @@
     </div>
 
     <div class="ci med">
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt ok">✓ แก้แล้ว</span></div>
+      <div class="ci-title">Hero banner (background น้ำเงิน + รูป coil ด้านหน้า) หนักเกินไปคนละก้อนกับที่แก้รอบแรก — background เป็นไฟล์ 5120×2880 (14.6MB!) ฝังผ่าน CSS background-image เลยหลุดจาก Next.js image optimization ไปเลย, รูป coil อีก 3.8MB</div>
+      <p class="fix">→ บีบเป็น webp แล้ว (18.4MB→917KB) โหลดที่ block 2 — background ต้องแก้ CSS ที่อ้างไฟล์ ไม่ใช่แค่ swap เฉยๆ (ดู README)</p>
+    </div>
+
+    <div class="ci med">
       <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอ IT</span></div>
       <div class="ci-title">H1 ขาดเว้นวรรค — "Transfer.Built"</div>
       <p class="fix">→ เติมช่องว่างหลัง "Transfer."</p>
@@ -166,7 +172,7 @@
     <h2><span class="num">2</span> Resource downloads <span class="hint">ไฟล์ให้ IT โหลด</span></h2>
     <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/01-home-page-section-guide.html" target="_blank" rel="noopener">📄 Home design guide</a>
     <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/sprints/w32-sprint-3/it-build-issues-by-page-th.md" target="_blank" rel="noopener">📄 UAT issues by page</a>
-    <a class="dl" href="https://github.com/tikittisak/cib-website/tree/master/team-handoff/sprints/w32-sprint-3/new-for-it-this-sprint/home-images" target="_blank" rel="noopener">📁 home-images/ — รูป+og-image+favicon (10 ไฟล์)</a>
+    <a class="dl" href="https://github.com/tikittisak/cib-website/tree/master/team-handoff/sprints/w32-sprint-3/new-for-it-this-sprint/home-images" target="_blank" rel="noopener">📁 home-images/ — รูป+og-image+favicon+hero banner (12 ไฟล์)</a>
     <p class="small" style="margin-top:8px;color:var(--muted)">IT/MKT login GitHub โหลดได้เลย</p>
   </section>
 
@@ -174,10 +180,10 @@
     <h2><span class="num">3</span> สถานะงาน</h2>
     <table class="kv">
       <tr><td>เจ้าของ build</td><td>IT สร้างเอง</td></tr>
-      <tr><td>สถานะปัจจุบัน</td><td>ขึ้น live แล้ว · แก้แล้ว 3 จุด (รอ IT เอาไปแทน) · เหลือ 12 จุด</td></tr>
+      <tr><td>สถานะปัจจุบัน</td><td>ขึ้น live แล้ว · แก้แล้ว 4 จุด (รอ IT เอาไปแทน) · เหลือ 12 จุด</td></tr>
       <tr><td>รอ Ti ตัดสิน</td><td>industries 2 อัน · Engineering URL · URL casing · email footer</td></tr>
-      <tr><td>รอ IT แก้โค้ด</td><td>Stainless Steel · industries 6 การ์ด · View More ×2 · About Us · H1 · heading h2→h3 · text ฝังในรูป · font-size</td></tr>
-      <tr><td>อัปเดตล่าสุด</td><td>2026-08-27</td></tr>
+      <tr><td>รอ IT แก้โค้ด</td><td>Stainless Steel · industries 6 การ์ด · View More ×2 · About Us · H1 · heading h2→h3 · text ฝังในรูป · font-size · สลับ hero banner เป็น webp (แก้ CSS)</td></tr>
+      <tr><td>อัปเดตล่าสุด</td><td>2026-08-28</td></tr>
     </table>
   </section>
 
@@ -191,6 +197,6 @@
     </ul>
   </section>
 
-  <footer class="scaffold-foot">Home node · audit 2026-08-27 · 3 จุดแก้แล้ว · รอ Ti 4 จุด + รอ IT 8 จุด</footer>
+  <footer class="scaffold-foot">Home node · audit 2026-08-27/28 · 4 จุดแก้แล้ว · รอ Ti 4 จุด + รอ IT 9 จุด</footer>
 </main>
 </body></html>
