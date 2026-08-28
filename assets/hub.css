@@ -108,5 +108,6 @@ pre.code{background:#0b1220;color:#e7eefc;padding:12px;border-radius:8px;overflo
 .preview-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;background:var(--soft);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--muted)}
 .preview-bar b{color:var(--text)}
 .preview-bar a{font-weight:700}
-.preview-frame{display:block;width:100%;border:0;background:#fff}
-@media(max-width:720px){.preview-frame{height:1100px !important}}
+.preview-frame{display:block;width:100%;border:0;background:#fff;height:720px}
+.preview-frame.live{height:760px}
+@media(max-width:720px){.preview-frame{height:560px !important}}
