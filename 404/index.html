@@ -14,11 +14,11 @@
     <div class="hero-badges"><span class="badge owner-it">IT สร้างเอง</span><span class="pill st-wip">Prototype พร้อม · รอ IT</span></div>
     <h1>404 / Page not found</h1>
     <span class="url">ไม่มี route ตรง — trigger ด้วยการเข้า path ที่ไม่มีจริงบนเว็บ</span>
-    <p class="hero-note">หน้า error page ของทั้งเว็บ — ทำ prototype แบรนด์เสร็จแล้ว (nav/footer/tokens ชุดเดียวกับหน้าอื่น)</p>
+    <p class="hero-note">หน้า error page ของทั้งเว็บ — ทำ prototype แบรนด์เสร็จแล้ว + review ตาม Google Search Central 404 standard</p>
   </div>
 
   <section class="block">
-    <h2><span class="num">1</span> Change notes <span class="hint">UAT 2026-08-03</span></h2>
+    <h2><span class="num">1</span> Change notes <span class="hint">UAT 2026-08-03 · Google-standard review 2026-08-28</span></h2>
 
     <div class="dim">🎨 UI — แบรนด์</div>
 
@@ -26,6 +26,19 @@
       <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอ IT</span></div>
       <div class="ci-title">หน้า 404 (live) ยังใช้ข้อความ default ของระบบ ไม่มีโลโก้/แบรนด์</div>
       <p class="fix">→ ใช้ prototype <code>404.html</code> ด้านล่างแทน (nav/footer = production shell จริง ไม่ต้องแตะ) — มี "Back to home" / "Contact us" + quick-link การ์ดไป Products/Solutions/Insights/Contact กันคนตกหลุม dead-end</p>
+    </div>
+
+    <div class="dim">🔍 SEO — Google 404 standard</div>
+
+    <div class="ci high">
+      <div class="ci-top"><span class="sev high">High</span><span class="stt wait">รอ IT</span></div>
+      <div class="ci-title">ไฟล์เป็น static HTML เดียว รับรอง HTTP status เองไม่ได้ — เสี่ยงเป็น "soft 404" (server ตอบ 200 ทั้งที่เนื้อหาคือ error)</div>
+      <p class="fix">→ IT ต้องตั้ง server ให้หน้านี้ตอบ status <code>404</code> (หรือ <code>410</code>) จริง ไม่ใช่ <code>200</code> — เช็คด้วย <code>curl -I</code> หรือ Network tab หลัง deploy ไม่งั้น Google ขึ้น "Soft 404" ใน Search Console และไม่ตัดหน้าออกจาก index (ข้อกำหนดหลักของ Google, ตัวเดียวที่แก้ในโค้ด HTML ไม่ได้)</p>
+    </div>
+
+    <div class="ci low">
+      <div class="ci-top"><span class="stt ok">สถานะดี</span></div>
+      <div class="ci-title">ผ่านตาม Google Search Central ที่เหลือ: ข้อความชัดเจน+เป็นมิตร · nav/footer เหมือนหน้าอื่น · ลิงก์ยอดนิยม + กลับหน้าแรก · ไม่ auto-redirect ไปหน้าแรก (กัน soft-404 อีกแบบ) · เพิ่มจุด "แจ้ง broken link" แล้ว · <code>noindex</code> เดี่ยว (ตัด <code>nofollow</code> เดิมออก — ไม่มีในด็อกจริงของ Google และกันลิงก์ nav โดยไม่จำเป็น)</div>
     </div>
   </section>
 
@@ -39,7 +52,7 @@
     <h2><span class="num">3</span> สถานะงาน</h2>
     <table class="kv">
       <tr><td>เจ้าของ build</td><td>IT สร้างเอง</td></tr>
-      <tr><td>สถานะปัจจุบัน</td><td>Prototype เสร็จ · รอ IT แทน default ของระบบ</td></tr>
+      <tr><td>สถานะปัจจุบัน</td><td>Prototype เสร็จ + review ตาม Google standard แล้ว · รอ IT แทน default + ตั้ง status code</td></tr>
       <tr><td>อัปเดตล่าสุด</td><td>2026-08-28</td></tr>
     </table>
   </section>
@@ -51,9 +64,10 @@
       <li>Figma frame: <span class="muted">— ยังไม่มี · ใช้ HTML prototype เป็นต้นแบบแทน —</span></li>
       <li>Finding ต้นทาง: <a href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/sprints/w32-sprint-3/it-build-issues-by-page-th.md" target="_blank" rel="noopener">it-build-issues-by-page-th.md</a></li>
       <li>ไฟล์ต้นทางใน repo: <a href="https://github.com/tikittisak/cib-website/tree/master/team-handoff/sprints/w32-sprint-3/new-for-it-this-sprint" target="_blank" rel="noopener">team-handoff/sprints/w32-sprint-3/new-for-it-this-sprint/</a></li>
+      <li>มาตรฐานที่ใช้ review: <a href="https://developers.google.com/search/docs/crawling-indexing/http-network-errors" target="_blank" rel="noopener">Google Search Central — HTTP status codes &amp; soft 404</a></li>
     </ul>
   </section>
 
-  <footer class="scaffold-foot">Node เพิ่มใหม่ + prototype เสร็จ 2026-08-28 · รายการที่ 17</footer>
+  <footer class="scaffold-foot">Node เพิ่มใหม่ + prototype เสร็จ + review ตาม Google standard 2026-08-28 · รายการที่ 17</footer>
 </main>
 </body></html>
