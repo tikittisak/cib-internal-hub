@@ -103,11 +103,14 @@ pre.code{background:#0b1220;color:#e7eefc;padding:12px;border-radius:8px;overflo
 .mini .bad{color:#c0392b}.mini .good{color:var(--ok)}.mini .hold2{color:var(--warn)}
 .dl.wait{background:#f1f5f9;color:#64748b;border-color:#e2e8f0}
 
-/* --- inline live preview (self-contained snapshot, images inlined as data URIs) --- */
+/* --- inline preview mirror (self-contained snapshot of a private-repo resource — prototype HTML or image, images inlined as data URIs) --- */
 .preview-block{padding:0;overflow:hidden}
 .preview-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;background:var(--soft);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--muted)}
 .preview-bar b{color:var(--text)}
 .preview-bar a{font-weight:700}
 .preview-frame{display:block;width:100%;border:0;background:#fff;height:720px}
-.preview-frame.live{height:760px}
 @media(max-width:720px){.preview-frame{height:560px !important}}
+.preview-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;padding:14px 16px}
+.preview-gallery figure{margin:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}
+.preview-gallery img{display:block;width:100%;height:110px;object-fit:contain;background:var(--soft)}
+.preview-gallery figcaption{padding:6px 8px;font-size:11.5px;color:var(--muted);border-top:1px solid var(--line);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
