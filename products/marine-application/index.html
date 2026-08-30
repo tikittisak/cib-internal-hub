@@ -34,22 +34,28 @@
       <p class="fix">→ Family overview prototype พร้อมแล้ว (โครงสร้างเดียวกับ Refrigeration/Special Coating: family-switcher bar, range grid 5 รุ่น, use-case grid, trust section, CTA) — ดู preview ด้านบน + ไฟล์ด้านล่าง สิ่งที่ต้องทำ: publish หน้านี้ + แก้ลิงก์การ์ด "Marine Application" บน Products overview ให้ชี้มาที่นี่</p>
     </div>
 
-    <div class="ci med">
-      <div class="ci-top"><span class="sev med">Med</span><span class="stt hold">รอ MKT/Ti</span></div>
-      <div class="ci-title">Hero ของ prototype เป็น gradient พื้นหลังชั่วคราว — ยังไม่มีรูปบรรยากาศ marine/offshore สำหรับ hero (รูป 5 model ที่มีอยู่เป็น product cutout ใช้แทนรูปบรรยากาศเต็มจอไม่ได้)</div>
-      <p class="fix">→ ส่ง prompt ที่แนบไว้ด้านล่าง (Resource downloads) เข้า image-gen tool แล้วนำไฟล์มาแทน gradient</p>
+    <div class="ci low">
+      <div class="ci-top"><span class="stt ok">✓ แก้แล้ว</span></div>
+      <div class="ci-title">Hero + use-case กริดทั้ง 4 ใช้รูปจริงที่ Ti เลือกแล้ว (ไม่ใช่ gradient/พื้นทึบเหมือนก่อนหน้า) — og:image/twitter:image/JSON-LD image ผูกรูปเดียวกันครบ</div>
+      <p class="fix">→ ไม่ต้องทำอะไรเพิ่ม — รูปพร้อมใช้งาน</p>
     </div>
 
     <div class="ci low">
       <div class="ci-top"><span class="stt ok">✓ ยืนยันแล้ว</span></div>
       <div class="ci-title">Class certifications (DNV/ABS/Lloyd's Register) — Ti ยืนยันเป็นจริงต่อโครงการ ("by project scope") และคำที่ใช้ในหน้าตอนนี้กระชับพอดี ไม่ต้องแก้เพิ่ม</div>
     </div>
+
+    <div class="ci low">
+      <div class="ci-top"><span class="stt hold">รอ Ti</span></div>
+      <div class="ci-title">ไฟล์รูปที่ gen ไว้ 3 ไฟล์ไม่ได้ถูกใช้ในหน้า (เวอร์ชันก่อนหน้าของ hero 2 ไฟล์ + Coastal Industrial เวอร์ชันแรก) — ยังอยู่ใน repo ไม่ได้ลบ</div>
+      <p class="fix">→ รอ Ti ตัดสินใจเก็บไว้อ้างอิงหรือลบทิ้ง (รายชื่อไฟล์อยู่ในหมวด Resource downloads)</p>
+    </div>
   </section>
 
   <section class="block">
     <h2><span class="num">2</span> Resource downloads <span class="hint">ไฟล์ให้ IT โหลด</span></h2>
     <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/pages/products/marine-application/marine-application.html" target="_blank" rel="noopener">📄 marine-application.html (prototype family overview)</a>
-    <a class="dl" href="https://github.com/tikittisak/cib-website/tree/master/team-handoff/pages/products/marine-application/images" target="_blank" rel="noopener">📁 images/ — 5 รูป model (ใช้ใน range grid แล้ว)</a>
+    <a class="dl" href="https://github.com/tikittisak/cib-website/tree/master/team-handoff/pages/products/marine-application/images" target="_blank" rel="noopener">📁 images/ — hero + 4 use-case + og:image + 5 รูป model (ใช้ในหน้าครบแล้ว)</a>
     <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/site/products/marine-air-conditioner.html" target="_blank" rel="noopener">marine-air-conditioner.html</a>
     <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/site/products/marine-chiller-unit.html" target="_blank" rel="noopener">marine-chiller-unit.html</a>
     <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/site/products/marine-fan-coil-unit.html" target="_blank" rel="noopener">marine-fan-coil-unit.html</a>
@@ -57,8 +63,8 @@
     <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/site/products/marine-unit-cooler-cold-room-type.html" target="_blank" rel="noopener">marine-unit-cooler-cold-room-type.html</a>
     <p class="small" style="margin-top:8px;color:var(--muted)">ทั้ง 5 model file content-complete พร้อม deploy · family overview เป็น prototype รอ IT ปรับเข้าระบบจริง — IT/MKT login GitHub โหลดได้เลย</p>
     <div style="margin-top:14px;padding:14px 16px;background:var(--soft);border:1px solid var(--line);border-radius:8px">
-      <p style="margin:0 0 8px;font-weight:700;font-size:13.5px;color:var(--text)">🎨 Prompt สำหรับ gen รูป hero (ส่งเข้า ChatGPT/DALL·E ได้เลย)</p>
-      <p style="margin:0;font-size:13px;line-height:1.6;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace">Cinematic, photorealistic wide establishing shot of an offshore oil/gas platform or industrial marine vessel deck at dusk. Dramatic industrial silhouette against a deep navy-blue and teal sky, ocean spray, engineering ductwork visible on deck. Moody blue-hour lighting, wide-angle lens, 21:9 aspect ratio. Darker tone and negative space on the left third of the frame for text overlay. Color grade toward navy blue (#09142F) and cyan (#33C0CC). No text, no logos, no people in focus. High detail, professional corporate/industrial photography style, not illustrated or cartoonish.</p>
+      <p style="margin:0 0 8px;font-weight:700;font-size:13.5px;color:var(--text)">รูปที่ gen ไว้แต่ไม่ได้ใช้ในหน้า (รอ Ti ตัดสินใจเก็บ/ลบ)</p>
+      <p style="margin:0;font-size:13px;line-height:1.6;color:var(--muted)">marine-application-hero-environment-v1.webp · marine-application-hero-protected-technical-space-v2.webp · marine-use-case-coastal-industrial.webp (เวอร์ชันแรก ก่อน v2)</p>
     </div>
   </section>
 
@@ -66,9 +72,9 @@
     <h2><span class="num">3</span> สถานะงาน</h2>
     <table class="kv">
       <tr><td>เจ้าของ build</td><td>IT สร้างเอง</td></tr>
-      <tr><td>สถานะปัจจุบัน</td><td>Prototype family overview เสร็จ · 5 model page content พร้อม · รอ publish</td></tr>
+      <tr><td>สถานะปัจจุบัน</td><td>Prototype family overview เสร็จ (รูปครบ) · 5 model page content พร้อม · รอ publish</td></tr>
       <tr><td>รอ IT แก้โค้ด</td><td>ปรับ prototype เข้าระบบจริง + publish 5 model pages · ผูกลิงก์การ์ดจาก Products overview</td></tr>
-      <tr><td>รอ MKT/Ti</td><td>สร้างรูป hero จริงแทน placeholder (ใช้ prompt ในหมวด Resource downloads)</td></tr>
+      <tr><td>รอ Ti</td><td>ตัดสินใจเก็บ/ลบไฟล์รูปที่ gen ไว้แต่ไม่ได้ใช้ 3 ไฟล์ (รายชื่อในหมวด Resource downloads)</td></tr>
       <tr><td>อัปเดตล่าสุด</td><td>2026-08-30</td></tr>
     </table>
   </section>
