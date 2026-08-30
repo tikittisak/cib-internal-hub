@@ -11,47 +11,73 @@
 <header class="topbar"><a class="home-link" href="../../index.html">← Dashboard</a><span class="crumb">Marine Application</span></header>
 <main class="wrap node">
   <div class="hero">
-    <div class="hero-badges"><span class="badge owner-it">IT สร้างเอง</span><span class="pill st-wip">404 จริง · รอ IT publish</span></div>
+    <div class="hero-badges"><span class="badge owner-it">IT สร้างเอง</span><span class="pill st-wip">Prototype พร้อม · รอ IT publish</span></div>
     <h1>Marine Application</h1>
     <a class="url" href="https://web.cigblusolutions.com/products/marine-application" target="_blank" rel="noopener">/products/marine-application ↗</a>
-    <p class="hero-note">family ใหม่ — audit 2026-08-28</p>
+    <p class="hero-note">family ใหม่ — audit 2026-08-28 · prototype family overview เพิ่ม 2026-08-30</p>
   </div>
 
+  <section class="block preview-block">
+    <div class="preview-bar">
+      <span><b>Live preview</b> — mirror ของ <code>marine-application.html</code> ฝัง inline · sync ล่าสุด 2026-08-30</span>
+      <a href="preview.html" target="_blank" rel="noopener">เปิดเต็มจอ ↗</a>
+    </div>
+    <iframe class="preview-frame" src="preview.html" title="Marine Application page preview" style="height:1600px"></iframe>
+  </section>
+
   <section class="block">
-    <h2><span class="num">1</span> Change notes <span class="hint">Audit 2026-08-28</span></h2>
+    <h2><span class="num">1</span> Change notes <span class="hint">Audit 2026-08-28 · prototype เพิ่ม 2026-08-30</span></h2>
 
     <div class="ci high">
       <div class="ci-top"><span class="sev high">High</span><span class="stt wait">รอ IT</span></div>
       <div class="ci-title">หน้า family overview ยังไม่ live เลย — ตอบ HTTP 404 จริง (เช็คด้วย curl แล้ว ไม่ใช่ soft-404) ตรงกับที่ Products (overview) node เจอไว้แล้ว</div>
-      <p class="fix">→ เนื้อหา 5 model page ใน family นี้พร้อมหมดแล้ว (ดู resource ด้านล่าง) เหลือแค่ publish family overview + ผูกลิงก์การ์ด "Marine Application" จากหน้า Products overview ที่ยังพาไป 404 อยู่</p>
+      <p class="fix">→ ✓ ทำ prototype family overview ให้แล้ว (โครง+เนื้อหาตาม pattern เดียวกับ Refrigeration/Special Coating: family-switcher bar, range grid 5 รุ่น, use-case grid, trust section, CTA) — ดู preview ด้านบน + resource ด้านล่าง เหลือแค่ IT publish + ผูกลิงก์การ์ด "Marine Application" จากหน้า Products overview ที่ยังพาไป 404 อยู่</p>
+    </div>
+
+    <div class="ci med">
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt hold">รอ MKT/Ti</span></div>
+      <div class="ci-title">Hero ของ prototype เป็น gradient พื้นหลังชั่วคราว — ยังไม่มีรูปบรรยากาศ marine/offshore จริงสำหรับ hero (ต่างจากรูป 5 model ที่เป็น product cutout อยู่แล้ว ใช้กับ hero เต็มจอไม่ได้)</div>
+      <p class="fix">→ ใช้ prompt gen รูปด้านล่าง (block 2) ส่งเข้า image-gen ได้เลย แล้วเอาไฟล์มาแทน gradient ใน prototype</p>
+    </div>
+
+    <div class="ci low">
+      <div class="ci-top"><span class="stt ok">สถานะดี</span></div>
+      <div class="ci-title">Class certifications (DNV/ABS/Lloyd's Register) เขียนเป็น "available upon request" ตามที่ Ti บอก — ไม่ assert เป็นข้อเท็จจริงที่ยืนยันแล้ว</div>
     </div>
   </section>
 
   <section class="block">
     <h2><span class="num">2</span> Resource downloads <span class="hint">ไฟล์ให้ IT โหลด</span></h2>
+    <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/pages/products/marine-application/marine-application.html" target="_blank" rel="noopener">📄 marine-application.html (prototype family overview)</a>
+    <a class="dl" href="https://github.com/tikittisak/cib-website/tree/master/team-handoff/pages/products/marine-application/images" target="_blank" rel="noopener">📁 images/ — 5 รูป model (ใช้ใน range grid แล้ว)</a>
     <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/site/products/marine-air-conditioner.html" target="_blank" rel="noopener">marine-air-conditioner.html</a>
     <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/site/products/marine-chiller-unit.html" target="_blank" rel="noopener">marine-chiller-unit.html</a>
     <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/site/products/marine-fan-coil-unit.html" target="_blank" rel="noopener">marine-fan-coil-unit.html</a>
     <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/site/products/marine-unit-cooler-ac-type.html" target="_blank" rel="noopener">marine-unit-cooler-ac-type.html</a>
     <a class="dl" href="https://github.com/tikittisak/cib-website/blob/master/site/products/marine-unit-cooler-cold-room-type.html" target="_blank" rel="noopener">marine-unit-cooler-cold-room-type.html</a>
-    <p class="small" style="margin-top:8px;color:var(--muted)">ทั้ง 5 ไฟล์ content-complete พร้อม deploy — IT/MKT login GitHub โหลดได้เลย</p>
+    <p class="small" style="margin-top:8px;color:var(--muted)">ทั้ง 5 model file content-complete พร้อม deploy · family overview เป็น prototype รอ IT ปรับเข้าระบบจริง — IT/MKT login GitHub โหลดได้เลย</p>
+    <div style="margin-top:14px;padding:14px 16px;background:var(--soft);border:1px solid var(--line);border-radius:8px">
+      <p style="margin:0 0 8px;font-weight:700;font-size:13.5px;color:var(--text)">🎨 Prompt สำหรับ gen รูป hero (ส่งเข้า ChatGPT/DALL·E ได้เลย)</p>
+      <p style="margin:0;font-size:13px;line-height:1.6;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace">Cinematic, photorealistic wide establishing shot of an offshore oil/gas platform or industrial marine vessel deck at dusk. Dramatic industrial silhouette against a deep navy-blue and teal sky, ocean spray, engineering ductwork visible on deck. Moody blue-hour lighting, wide-angle lens, 21:9 aspect ratio. Darker tone and negative space on the left third of the frame for text overlay. Color grade toward navy blue (#09142F) and cyan (#33C0CC). No text, no logos, no people in focus. High detail, professional corporate/industrial photography style, not illustrated or cartoonish.</p>
+    </div>
   </section>
 
   <section class="block">
     <h2><span class="num">3</span> สถานะงาน</h2>
     <table class="kv">
       <tr><td>เจ้าของ build</td><td>IT สร้างเอง</td></tr>
-      <tr><td>สถานะปัจจุบัน</td><td>Family overview 404 จริง · 5 model page content พร้อม รอ publish</td></tr>
-      <tr><td>รอ IT แก้โค้ด</td><td>Publish family overview + 5 model pages · ผูกลิงก์การ์ดจาก Products overview</td></tr>
-      <tr><td>อัปเดตล่าสุด</td><td>2026-08-28</td></tr>
+      <tr><td>สถานะปัจจุบัน</td><td>Prototype family overview เสร็จ · 5 model page content พร้อม · รอ publish</td></tr>
+      <tr><td>รอ IT แก้โค้ด</td><td>ปรับ prototype เข้าระบบจริง + publish 5 model pages · ผูกลิงก์การ์ดจาก Products overview</td></tr>
+      <tr><td>รอ MKT/Ti</td><td>Gen รูป hero จริงแทน placeholder (prompt ให้แล้ว) · ยืนยัน certification claims</td></tr>
+      <tr><td>อัปเดตล่าสุด</td><td>2026-08-30</td></tr>
     </table>
   </section>
 
   <section class="block">
     <h2><span class="num">4</span> ลิงก์อ้างอิง</h2>
-    <ul class="refs"><li>Live (staging): <a href="https://web.cigblusolutions.com/products/marine-application" target="_blank" rel="noopener">https://web.cigblusolutions.com/products/marine-application</a> <span class="muted">(404 จริง)</span></li><li>Live (final): <span class="muted">https://www.cigblu.com/products/marine-application</span> <span class="muted">(เมื่อย้าย domain)</span></li><li>Figma frame: <span class="muted">— วางลิงก์ —</span></li><li>ไฟล์ต้นทางใน repo: <a href="https://github.com/tikittisak/cib-website/tree/master/site/products" target="_blank" rel="noopener">site/products/</a></li></ul>
+    <ul class="refs"><li>Live (staging): <a href="https://web.cigblusolutions.com/products/marine-application" target="_blank" rel="noopener">https://web.cigblusolutions.com/products/marine-application</a> <span class="muted">(404 จริง)</span></li><li>Live (final): <span class="muted">https://www.cigblu.com/products/marine-application</span> <span class="muted">(เมื่อย้าย domain)</span></li><li>Figma frame: <span class="muted">— วางลิงก์ —</span></li><li>ไฟล์ต้นทางใน repo: <a href="https://github.com/tikittisak/cib-website/tree/master/site/products" target="_blank" rel="noopener">site/products/</a> · <a href="https://github.com/tikittisak/cib-website/tree/master/team-handoff/pages/products/marine-application" target="_blank" rel="noopener">team-handoff/pages/products/marine-application/</a></li></ul>
   </section>
 
-  <footer class="scaffold-foot">Marine Application node · audit 2026-08-28 · 404 จริง รอ IT publish</footer>
+  <footer class="scaffold-foot">Marine Application node · audit 2026-08-28 · prototype family overview เพิ่ม 2026-08-30 · รอ IT publish</footer>
 </main>
 </body></html>
