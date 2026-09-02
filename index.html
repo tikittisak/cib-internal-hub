@@ -26,12 +26,12 @@
     <div class="stat"><b>1</b><span>ลิงก์ออก</span></div>
   </div>
 
-  <div class="note-card">📌 สถานะตอนนี้เป็นค่าเริ่มต้น (scaffold) — จะไล่อัปเดตจริงตอนเปิดเว็บ IT เช็กทีละหน้า</div>
+  <div class="priority-legend">🎯 <b>โฟกัสตอนนี้:</b> Home · Products catalog · Contact · 404 — แก้ 4 หน้านี้ก่อน หน้าที่เหลือรอได้</div>
 
   <table class="board">
     <thead><tr><th>#</th><th>หน้า</th><th>URL จริง</th><th>เจ้าของ</th><th>สถานะ</th><th>resources</th></tr></thead>
     <tbody>
-    <tr class="" onclick="location.href='home/index.html'">
+    <tr class="priority" onclick="location.href='home/index.html'">
       <td class="num">1</td>
       <td class="tt"><a href="home/index.html">Home</a></td>
       <td><a class="url" href="https://web.cigblusolutions.com/" target="_blank" rel="noopener" onclick="event.stopPropagation()">/ ↗</a></td>
@@ -94,7 +94,7 @@
       <td><span class="badge owner-cross">แบรนด์อื่น</span></td>
       <td><span class="pill st-external">ลิงก์ออก</span></td>
       <td class="muted">—</td>
-    </tr><tr class="child" onclick="location.href='products/catalog/index.html'">
+    </tr><tr class="child priority" onclick="location.href='products/catalog/index.html'">
       <td class="num">10</td>
       <td class="tt">· <a href="products/catalog/index.html">Products catalog</a></td>
       <td><a class="url" href="https://web.cigblusolutions.com/productsCatalog" target="_blank" rel="noopener" onclick="event.stopPropagation()">/productsCatalog ↗</a></td>
@@ -136,14 +136,14 @@
       <td><span class="badge owner-cpk">MKT สร้างเอง</span></td>
       <td><span class="pill st-wip">ขึ้นแล้ว · รอแก้</span></td>
       <td class="muted">—</td>
-    </tr><tr class="" onclick="location.href='contact/index.html'">
+    </tr><tr class="priority" onclick="location.href='contact/index.html'">
       <td class="num">16</td>
       <td class="tt"><a href="contact/index.html">Contact</a></td>
       <td><a class="url" href="https://web.cigblusolutions.com/contact" target="_blank" rel="noopener" onclick="event.stopPropagation()">/contact ↗</a></td>
       <td><span class="badge owner-it">IT สร้างเอง</span></td>
       <td><span class="pill st-wip">รอ IT แทน stub (blocker)</span></td>
       <td>2 ไฟล์</td>
-    </tr><tr class="" onclick="location.href='404/index.html'">
+    </tr><tr class="priority" onclick="location.href='404/index.html'">
       <td class="num">17</td>
       <td class="tt"><a href="404/index.html">404 / Page not found</a></td>
       <td><span class="url muted">— ไม่มี route ตรง</span></td>
