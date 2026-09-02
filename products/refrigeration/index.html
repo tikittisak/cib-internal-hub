@@ -27,6 +27,12 @@
       <p class="fix">→ ใส่ลิงก์จริง (View Products → catalog ที่เกี่ยวข้อง, Download Catalog → ไฟล์ PDF)</p>
     </div>
 
+    <div class="ci high">
+      <div class="ci-top"><span class="sev high">High</span><span class="stt wait">รอ IT</span></div>
+      <div class="ci-title">จอกว้าง (1920px+) ข้อความ hero ชิดซ้ายมาก เว้นว่างตรงกลางเยอะก่อนถึงรูปสินค้า — H1/คำอธิบาย hero ล็อค max-width 672px ไม่ขยายตามจอ เป็น component เดียวกับ Special Coating (บั๊กเดียวกัน)</div>
+      <p class="fix">→ เพิ่ม breakpoint กว้างให้ข้อความ hero (เช่น <code>xl:max-w-3xl</code>) หรือกำหนด max-width รวมทั้งหน้าไว้ที่ ~1280-1366px แล้ว center — แก้จุดเดียวได้ทั้ง Refrigeration และ Special Coating เพราะใช้ component เดียวกัน</p>
+    </div>
+
     <div class="ci med">
       <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอ IT</span></div>
       <div class="ci-title">แบรนด์เขียน "D-Coat+" (ตัวเล็กผิด) ควรเป็น "D-COAT+" ตัวใหญ่ทั้งหมด</div>
@@ -74,8 +80,8 @@
     <h2><span class="num">3</span> สถานะงาน</h2>
     <table class="kv">
       <tr><td>เจ้าของ build</td><td>IT + MKT</td></tr>
-      <tr><td>สถานะปัจจุบัน</td><td>ขึ้น live แล้ว · แก้แล้ว 1 จุด (รอ IT เอาไปแทน) · เหลือ 3 จุด รอ IT</td></tr>
-      <tr><td>รอ IT แก้โค้ด</td><td>ผูกลิงก์ View Products/Download Catalog · D-COAT+ ตัวสะกด · og:image</td></tr>
+      <tr><td>สถานะปัจจุบัน</td><td>ขึ้น live แล้ว · แก้แล้ว 1 จุด (รอ IT เอาไปแทน) · เหลือ 4 จุด รอ IT</td></tr>
+      <tr><td>รอ IT แก้โค้ด</td><td>ผูกลิงก์ View Products/Download Catalog · D-COAT+ ตัวสะกด · og:image · hero max-width จอกว้าง</td></tr>
       <tr><td>อัปเดตล่าสุด</td><td>2026-08-28</td></tr>
     </table>
   </section>
@@ -85,6 +91,6 @@
     <ul class="refs"><li>Live (staging): <a href="https://web.cigblusolutions.com/products/refrigeration" target="_blank" rel="noopener">https://web.cigblusolutions.com/products/refrigeration</a></li><li>Live (final): <span class="muted">https://www.cigblu.com/products/refrigeration</span> <span class="muted">(เมื่อย้าย domain)</span></li><li>Figma frame: <span class="muted">— วางลิงก์ —</span></li><li>ไฟล์ต้นทางใน repo: <a href="https://github.com/tikittisak/cib-website/blob/master/team-handoff/pages/products/refrigeration/06-refrigeration-page-section-guide.html" target="_blank" rel="noopener">06-refrigeration-page-section-guide.html</a></li></ul>
   </section>
 
-  <footer class="scaffold-foot">Refrigeration node · audit 2026-08-28 · แก้แล้ว 1 จุด · เหลือ 3 จุด รอ IT</footer>
+  <footer class="scaffold-foot">Refrigeration node · audit 2026-08-28 · แก้แล้ว 1 จุด · เหลือ 4 จุด รอ IT</footer>
 </main>
 </body></html>
