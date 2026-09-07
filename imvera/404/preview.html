@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Not Found — IMVERA</title>
+<meta name="description" content="This page doesn't exist on IMVERA. Find our cooling platforms, applications, or contact engineering directly.">
+<meta name="robots" content="noindex">
+<style>
+  :root{
+    --navy:#09142f;--blue:#00879c;--blue-deep:#046478;--cyan:#00c2d6;--cyan-soft:#8fe9f2;
+    --ink:#0e1a2e;--text:#1b2436;--muted:#4d5b73;--faint:#7c8aa0;
+    --soft:#f2f3f5;--soft-2:#eef0f5;--line:#d7dce4;--line-2:#b9c2d0;--white:#fff;--radius:8px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--white);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;font-size:16px}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 48px}
+  code{font-family:"JetBrains Mono",monospace}
+
+  /* ===== NAV — matches the real IMVERA header (see content-reference/live-mirror-2026-09-07/index.html) ===== */
+  .topbar{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line)}
+  .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .brand{display:flex;align-items:center;gap:10px;color:var(--navy);font-weight:800;font-size:19px}
+  .brand-mark{width:26px;height:20px;border:5px solid var(--blue);border-right-color:var(--cyan);border-radius:50%;transform:rotate(-28deg)}
+  .navlinks{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:600;color:#3b4759;margin-left:auto;margin-right:8px}
+  .navlinks a:hover{color:var(--blue)}
+  .nav-cta{display:inline-flex;align-items:center;height:40px;padding:0 18px;border-radius:var(--radius);background:var(--blue);color:#fff;font-size:13.5px;font-weight:700}
+  .nav-cta:hover{background:var(--blue-deep)}
+
+  /* ===== 404 BODY ===== */
+  .err{padding:96px 48px 88px;text-align:center}
+  .err-code{font-family:"JetBrains Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.08em;color:var(--blue);text-transform:uppercase;margin:0 0 18px}
+  .err h1{font-size:42px;line-height:1.15;margin:0 0 18px;color:var(--navy);letter-spacing:-.01em}
+  .err p.lead{max-width:560px;margin:0 auto 40px;color:var(--muted);font-size:16.5px}
+  .err-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:64px}
+  .btn{display:inline-flex;align-items:center;height:46px;padding:0 24px;border-radius:var(--radius);font-size:14.5px;font-weight:700}
+  .btn.primary{background:var(--blue);color:#fff}
+  .btn.primary:hover{background:var(--blue-deep)}
+  .btn.ghost{background:var(--soft);color:var(--navy);border:1px solid var(--line-2)}
+  .btn.ghost:hover{border-color:var(--blue);color:var(--blue)}
+
+  .quicklinks{max-width:760px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:left}
+  .ql-card{border:1px solid var(--line);border-radius:var(--radius);padding:20px;background:var(--soft)}
+  .ql-card b{display:block;color:var(--navy);font-size:14.5px;margin-bottom:4px}
+  .ql-card span{display:block;color:var(--faint);font-size:13px}
+  .ql-card:hover{border-color:var(--blue)}
+
+  .report{margin-top:56px;font-size:13.5px;color:var(--faint)}
+  .report a{color:var(--blue);font-weight:600}
+
+  /* ===== FOOTER — real content transcribed from the live mirror ===== */
+  footer{background:var(--navy);color:#aeb9cd;margin-top:40px}
+  .foot-wrap{max-width:1280px;margin:0 auto;padding:52px 48px 30px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+  footer h4{color:#fff;font-size:13px;letter-spacing:.04em;text-transform:uppercase;margin:0 0 14px}
+  footer .about-blurb{font-size:13.5px;line-height:1.7;color:#93a0b8;max-width:320px}
+  footer ul{list-style:none;margin:0;padding:0}
+  footer li{margin:0 0 10px;font-size:13.5px}
+  footer a:hover{color:#fff}
+  .foot-bottom{border-top:1px solid #1c2947;padding:18px 48px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:#7f8caa;max-width:1280px;margin:0 auto}
+
+  @media (max-width:720px){
+    .navlinks{display:none}
+    .err{padding:64px 24px 56px}
+    .err h1{font-size:30px}
+    .quicklinks{grid-template-columns:1fr}
+    .foot-wrap{grid-template-columns:1fr;padding:40px 24px 24px}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="/"><span class="brand-mark"></span>IMVERA</a>
+    <nav class="navlinks">
+      <a href="/#products">Products</a>
+      <a href="/#applications">Applications</a>
+      <a href="/#calculator">Calculator</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact Us</a>
+    </nav>
+    <a class="nav-cta" href="/contact">Get the catalog →</a>
+  </div>
+</header>
+
+<main class="err">
+  <p class="err-code">404 · Page not found</p>
+  <h1>This page didn't make it through the loop.</h1>
+  <p class="lead">The page you're looking for doesn't exist, or the link may be out of date. Everything else on IMVERA is working normally — try one of these instead.</p>
+
+  <div class="err-actions">
+    <a class="btn primary" href="/">Back to Home</a>
+    <a class="btn ghost" href="/contact">Talk to Engineering</a>
+  </div>
+
+  <div class="quicklinks">
+    <a class="ql-card" href="/products/s-series"><b>S-Series</b><span>Immersion Cooling</span></a>
+    <a class="ql-card" href="/products/maxflow"><b>MaxFlow</b><span>V-Type Dry Cooler</span></a>
+    <a class="ql-card" href="/products/save-cool"><b>Save-Cool</b><span>Adiabatic Cooling</span></a>
+  </div>
+
+  <p class="report">Think this is a broken link on our end? <a href="/contact">Let us know</a> and we'll fix it.</p>
+</main>
+
+<footer>
+  <div class="foot-wrap">
+    <div>
+      <h4>IMVERA</h4>
+      <p class="about-blurb">The Cooling Platform for AI. IMVERA is engineered by CIG BluSolutions Co., Ltd. — manufacturers of HVAC/R thermal management for data centers, industrial process, marine, and cold chain worldwide.</p>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="/products/s-series">S-Series — Immersion</a></li>
+        <li><a href="/products/maxflow">MaxFlow — Dry Cooler</a></li>
+        <li><a href="/products/save-cool">Save-Cool — Adiabatic</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/about">About CIG BluSolutions</a></li>
+        <li><a href="/#applications">Applications</a></li>
+        <li><a href="/contact">Contact Engineering</a></li>
+        <li><a href="/assets/IMVERA-Catalog.pdf">Catalog (PDF)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 CIG BluSolutions · All rights reserved · ISO 9001:2015 · UL · AHRI · EcoVadis</span>
+    <span>+66 (0) 92 463 2366 · care@cigblusolutions.com</span>
+  </div>
+</footer>
+
+</body>
+</html>
