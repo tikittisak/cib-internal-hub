@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Home · IMVERA · CIG Internal Hub</title>
+<link rel="stylesheet" href="../../assets/hub.css">
+</head>
+<body>
+<header class="topbar"><a class="home-link" href="../index.html">← Dashboard</a><span class="crumb">Home</span></header>
+<main class="wrap node">
+  <div class="hero">
+    <div class="hero-badges"><span class="badge owner-it">IT สร้างเอง</span><span class="pill st-wip">ขึ้นแล้ว · รอแก้</span></div>
+    <h1>Home</h1>
+    <a class="url" href="https://www.imvera.co/" target="_blank" rel="noopener">/ ↗</a>
+    <p class="hero-note">หน้าแรก live แล้ว เนื้อหาจริงครบ (heading เรียบร้อย มี viewport meta) — จุดที่ต้องแก้เป็นเรื่อง technical SEO/crawler ทั้งหมด ไม่ใช่เนื้อหา รวม 2 จุดที่เป็นปัญหาระดับทั้งเว็บ (ไม่ใช่แค่หน้านี้) ด้วย</p>
+  </div>
+
+  <section class="block">
+    <h2><span class="num">1</span> Change notes <span class="hint">Audit 2026-09-07</span></h2>
+
+    <div class="dim">🚨 ปัญหาทั้งเว็บ (เจอจากหน้านี้ แต่กระทบทุกหน้า)</div>
+
+    <div class="ci high">
+      <div class="ci-top"><span class="sev high">Blocker</span><span class="stt wait">รอ IT</span></div>
+      <div class="ci-title"><code>sitemap.xml</code> ทุก URL (6 หน้า) ชี้ไป <code>https://imvera.cigblusolutions.com:8902</code> — เป็น URL ของเครื่อง staging ภายใน ไม่ใช่ <code>www.imvera.co</code> เลย</div>
+      <p class="fix">→ regenerate sitemap ให้ใช้ domain จริง ไม่ใช่ค่า staging ที่หลุดเข้ามา — ถ้าไม่แก้ Google อาจไป index หน้า staging แทนเว็บจริง</p>
+    </div>
+
+    <div class="ci high">
+      <div class="ci-top"><span class="sev high">High</span><span class="stt wait">รอ IT</span></div>
+      <div class="ci-title">ไม่มี <code>robots.txt</code> เลย (404) — ไม่มีจุดชี้ไป sitemap ด้วย</div>
+      <p class="fix">→ สร้างไฟล์ ใส่ <code>Sitemap:</code> ชี้ไป sitemap.xml ที่แก้ domain แล้ว</p>
+    </div>
+
+    <div class="ci high">
+      <div class="ci-top"><span class="sev high">High</span><span class="stt wait">รอ IT</span></div>
+      <div class="ci-title">ไม่มี <code>llms.txt</code> เลย (404) — ไม่มีคำแนะนำสำหรับ AI crawler เลยทั้งเว็บ</div>
+      <p class="fix">→ เพิ่มไฟล์ — เจอ gap เดียวกันตอน audit cigblu.com ก่อนหน้านี้</p>
+    </div>
+
+    <div class="dim">📄 เฉพาะหน้านี้</div>
+
+    <div class="ci med">
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอ IT</span></div>
+      <div class="ci-title">meta description เหมือนกันเป๊ะกับอีก 5 หน้าที่เหลือ (เช็คแล้วทั้ง 6 หน้าข้อความเดียวกันทุกตัวอักษร)</div>
+      <p class="fix">→ อันนี้พอใช้ได้กับ Home เพราะเป็นข้อความ pitch รวม แต่หน้า product ทั้ง 3 ควรมีของตัวเอง (ดู node นั้น ๆ)</p>
+    </div>
+
+    <div class="ci med">
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอ IT</span></div>
+      <div class="ci-title">ไม่มี canonical tag + ไม่มี og:image</div>
+      <p class="fix">→ เพิ่มทั้งคู่ — เช็คแล้วไม่มีสักหน้าในทั้ง 6 หน้า ไม่ใช่แค่หน้านี้</p>
+    </div>
+
+    <div class="ci med">
+      <div class="ci-top"><span class="sev med">Med</span><span class="stt wait">รอ IT</span></div>
+      <div class="ci-title">ไม่มี JSON-LD structured data เลย</div>
+      <p class="fix">→ หน้านี้ควรมี <code>Organization</code> schema อย่างน้อย (ชื่อบริษัท, logo, sameAs ไป cigblu.com) — แบบเดียวกับที่ cigblu.com ใช้อยู่แล้ว</p>
+    </div>
+
+    <div class="ci low">
+      <div class="ci-top"><span class="stt ok">สถานะดี</span></div>
+      <div class="ci-title">Heading ถูกต้อง (H1 เดียว, H2 เรียงถูกลำดับ ไม่ข้าม level) · มี viewport meta · เนื้อหาจริง ไม่ใช่ placeholder</div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">2</span> Resource downloads <span class="hint">ไฟล์ให้ IT โหลด</span></h2>
+    <a class="dl" href="https://github.com/tikittisak/imvera-website/blob/main/content-reference/live-mirror-2026-09-07/index.html" target="_blank" rel="noopener">📁 mirror ของหน้านี้ (raw HTML)</a>
+    <a class="dl" href="https://github.com/tikittisak/imvera-website/blob/main/seo-ai-crawler-audit-2026-09-07.md" target="_blank" rel="noopener">📄 audit เต็ม (รวมทุกหน้า)</a>
+    <p class="small" style="margin-top:8px;color:var(--muted)"><code>imvera-website</code> เป็น repo private — IT/MKT login GitHub โหลดได้ปกติ</p>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">3</span> สถานะงาน</h2>
+    <table class="kv">
+      <tr><td>เจ้าของ build</td><td>IT สร้างเอง (แยกจาก cigblu.com ทั้งระบบ)</td></tr>
+      <tr><td>สถานะปัจจุบัน</td><td>ขึ้น live แล้ว เนื้อหาจริง · เหลือแก้ SEO/crawler technical</td></tr>
+      <tr><td>รอ IT แก้โค้ด</td><td>sitemap.xml domain, robots.txt, llms.txt, canonical, og:image, JSON-LD</td></tr>
+      <tr><td>อัปเดตล่าสุด</td><td>2026-09-07</td></tr>
+    </table>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">4</span> ลิงก์อ้างอิง</h2>
+    <ul class="refs">
+      <li>Live: <a href="https://www.imvera.co/" target="_blank" rel="noopener">https://www.imvera.co/</a></li>
+      <li>ไฟล์ต้นทางใน repo: <a href="https://github.com/tikittisak/imvera-website" target="_blank" rel="noopener">imvera-website</a> (private)</li>
+    </ul>
+  </section>
+
+  <footer class="scaffold-foot">Home node · audit 2026-09-07 · 5 จุด (3 เป็นปัญหาทั้งเว็บ)</footer>
+</main>
+</body></html>
